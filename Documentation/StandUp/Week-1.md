@@ -27,10 +27,12 @@ Dinsdag
 
 Woensdag
     StandUp
-        
+        Gaan we werken met JS of C# or React?
+        Workeshops volgen
+        Meerdere ideas pitchen (mockups maken) 
 
     What Did We Do
         Tijl    : 
         Tayfun  : 
-        Jaleel  : 
-        Dania   : 
+        Jaleel  : C# scopen
+        Dania   : Rekenen + SC + Learning about JS (YouTube)
