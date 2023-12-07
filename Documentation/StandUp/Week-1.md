@@ -29,10 +29,20 @@ Woensdag
     StandUp
         Gaan we werken met JS of C# or React?
         Workeshops volgen
-        Meerdere ideas pitchen (mockups maken) 
+        Meerdere ideas pitchen (mockups maken)
 
     What Did We Do
-        Tijl    : 
-        Tayfun  : 
+        Tijl    : Samenwerkings contract begin invullen
+        Tayfun  : N/A
         Jaleel  : C# scopen
         Dania   : Rekenen + SC + Learning about JS (YouTube)
+
+Donderdag
+    StandUp
+        Figma mock up maken (Tijl + Jaleel) idea 1 [easy website tab met lijst van hardware/software met security issues, click voor meer info, click op een threat om info over de threat te krijgen en hoe je deze zou kunnen oplossen] idea 2 [app with either C# or React (undicided) maak quizen van security threats met chat GTP op de zijkant] => 
+
+    What Did We Do
+        Tijl    : Mock up met Figma, Js op W3Schools
+        Tayfun  : CS
+        Jaleel  : Mock up met Figma, C# W3Schools
+        Dania   : Rekenen, Engels, Versnelling bestand invullen
