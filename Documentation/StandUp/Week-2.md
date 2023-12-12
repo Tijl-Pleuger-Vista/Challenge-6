@@ -1,17 +1,21 @@
 Maandag
     StandUp
+        Workshop van DATABASE Tijd
+        Verder werken aan Figma
+        Workshop skills
 
     What Did We Do
-        Tijl    : 
-        Tayfun  : 
-        Jaleel  : 
-        Dania   : 
+        Tijl    : Figma
+        Tayfun  : Bewijslast skills
+        Jaleel  : Figma
+        Dania   : N/A
 
 Dinsdag
     StandUp
+        Workshop, Burgerschap, documentatie.docx
 
     What Did We Do
-        Tijl    : 
+        Tijl    : Documentatie.docx
         Tayfun  : 
         Jaleel  : 
         Dania   : 

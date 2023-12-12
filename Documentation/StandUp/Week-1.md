@@ -46,3 +46,14 @@ Donderdag
         Tayfun  : CS
         Jaleel  : Mock up met Figma, C# W3Schools
         Dania   : Rekenen, Engels, Versnelling bestand invullen
+
+Vrijdag
+    StandUp
+        Workshops van Nederlands x2
+        Afronden voor het weekend
+
+    What Did We Do
+        Tijl    : Js op W3Schools, Mock up met Figma, Versnelling bestand maken, workshops, Nederlands
+        Tayfun  : In Sittard tot 12:30 en CS
+        Jaleel  : workshops, C# op W3Schools, Nederlands
+        Dania   : ???
