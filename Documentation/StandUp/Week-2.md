@@ -18,7 +18,7 @@ Dinsdag
         Tijl    : Documentatie.docx
         Tayfun  : CTF
         Jaleel  : 
-        Dania   : 
+        Dania   : workshops,Nederlans,rond tafel gespreek, tutorial c#
 
 Woensdag
     StandUp
@@ -27,7 +27,7 @@ Woensdag
         Tijl    : 
         Tayfun  : 
         Jaleel  : 
-        Dania   : 
+        Dania   :tutorial c#,  
 
 Donderdag
     StandUp
