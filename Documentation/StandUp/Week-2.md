@@ -16,7 +16,7 @@ Dinsdag
 
     What Did We Do
         Tijl    : Documentatie.docx
-        Tayfun  : 
+        Tayfun  : CTF
         Jaleel  : 
         Dania   : 
 
