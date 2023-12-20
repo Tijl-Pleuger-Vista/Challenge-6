@@ -22,15 +22,17 @@ Dinsdag
 
 Woensdag
     StandUp
+        N/A
 
     What Did We Do
-        Tijl    : 
-        Tayfun  : 
-        Jaleel  : 
-        Dania   :tutorial c#,  
+        Tijl    : Documenten + voorberijding details + vragen voor morgen
+        Tayfun  : UI Figma
+        Jaleel  : Onderzoek OWASP WEB SECURITY
+        Dania   :tutorial c#,  Rekenen
 
 Donderdag
     StandUp
+        
 
     What Did We Do
         Tijl    : 
