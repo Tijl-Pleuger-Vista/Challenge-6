@@ -12,7 +12,6 @@ Maandag
         Dania   : Brainstorming voor de challenge
 
 
-
 Dinsdag
     StandUp
         Maak een mock-up

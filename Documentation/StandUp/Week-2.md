@@ -28,21 +28,22 @@ Woensdag
         Tijl    : Documenten + voorberijding details + vragen voor morgen
         Tayfun  : UI Figma
         Jaleel  : Onderzoek OWASP WEB SECURITY
-        Dania   :tutorial c#,  Rekenen
+        Dania   : tutorial c#,  Rekenen
 
 Donderdag
     StandUp
-        
+        Gesprek met PVO
 
     What Did We Do
-        Tijl    : 
-        Tayfun  : 
-        Jaleel  : 
-        Dania   : 
+        Tijl    : [Gesprek]
+        Tayfun  : [Gesprek]
+        Jaleel  : [Gesprek]
+        Dania   : [Gesprek]
 
 Vrijdag
     StandUp
-
+        All agreed to work on rekenen + nederlands + CS
+        
     What Did We Do
         Tijl    : 
         Tayfun  : 
