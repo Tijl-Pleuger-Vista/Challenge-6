@@ -33,6 +33,28 @@
 //     },
 //   );
 
+
+fetch(`https://api.my-ip.io/v2/ip.json	`)
+.then(userData => userData.json())
+.then(userData => {
+    console.log(userData)
+
+// var gitTime = subCategories.commit.author.date
+var code = userData.country.code
+data.innerHTML +=
+`
+<p>Response. . . . . . . . . . . . . : ${userData.success}</p>
+<p>Address type. . . . . . . . . . . : ${userData.type}</p>
+<p>IPv4 Address. . . . . . . . . . . : ${userData.ip}</p>
+<p>User location . . . . . . . . . . : ${userData.region}</p>
+<p>xx User location without . . . . . . . . . . : ${userData.country.code}</p>
+<p>yy User location . . . . . . . . . . : ${code}</p>
+
+`
+})
+
+
+// https://api.my-ip.io/v2/ip.json	
 window.addEventListener("keydown", function(event) {
     letter = event.key;
     // if(/[a-zA-Z]/.test(letter)) {
@@ -102,7 +124,8 @@ window.addEventListener("keydown", function(event) {
     }
 
     if(letter == "Enter") {
-        const search =document.getElementById("log").innerText;
+        const search = document.getElementById("log").innerText;
+        searchTerminal(search)
         const box = document.getElementById('log');
         // const underscore = this.document.getElementsByClassName('underscore');
         // console.log(underscore);
@@ -120,3 +143,22 @@ window.addEventListener("keydown", function(event) {
     }
 
 });
+
+function searchTerminal (_search){
+    // console.log("search " + _search)
+    if(_search == "meow") {terminal.innerHTML += 
+        `
+        <div class="row">
+        <p style="margin-right: 8px;">PS C:\\Users/admin></p><p></p><p>I am not a cat</p>
+        </div>
+        `
+    };
+    if(_search == "help") {terminal.innerHTML += 
+        `
+        <div class="row">
+        <p style="margin-right: 8px;">PS C:\\Users/admin></p><p></p><p>all commands: help, meow, ip, log, contact, website</p>
+        </div>
+        `
+    };
+
+}
