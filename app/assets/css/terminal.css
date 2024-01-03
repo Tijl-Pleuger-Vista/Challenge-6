@@ -443,24 +443,25 @@ strong {
 
 /* NEW */
 @font-face {
-    font-family: console;
-    src: url(../font/console.ttf);
+  font-family: console;
+  src: url(../font/console.ttf);
 }
 .underscore {
-    animation: blinker 1s linear infinite;
+  animation: blinker 1s linear infinite;
+}
+.blank {
+opacity: 0;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
-  
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
-
+}
 p {
-    margin: 0;
-    width: fit-content;
+  margin: 0;
+  width: fit-content;
 }
 .code {
-    margin-left: 8px;
-    color: #F9F1A5;
+  margin-left: 8px;
+  color: #F9F1A5;
 }
