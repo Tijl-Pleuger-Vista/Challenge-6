@@ -25,6 +25,10 @@
 
 window.addEventListener("keydown", function(event) {
     letter = event.key;
+    console.log(letter)
+
+    // var spacebar = document.querySelector('.code-spacebar');
+    // spacebar.classList.replace("code-spacebar","code");
 
     if(letter == "a") {log.innerHTML += letter}
     if(letter == "b") {log.innerHTML += letter}
@@ -53,33 +57,83 @@ window.addEventListener("keydown", function(event) {
     if(letter == "y") {log.innerHTML += letter}
     if(letter == "z") {log.innerHTML += letter}
 
-    // if(letter == "A") {log.innerHTML += letter}
-    // if(letter == "B") {log.innerHTML += letter}
-    // if(letter == "C") {log.innerHTML += letter}
-    // if(letter == "D") {log.innerHTML += letter}
-    // if(letter == "E") {log.innerHTML += letter}
-    // if(letter == "F") {log.innerHTML += letter}
-    // if(letter == "G") {log.innerHTML += letter}
-    // if(letter == "H") {log.innerHTML += letter}
-    // if(letter == "I") {log.innerHTML += letter}
-    // if(letter == "J") {log.innerHTML += letter}
-    // if(letter == "K") {log.innerHTML += letter}
-    // if(letter == "L") {log.innerHTML += letter}
-    // if(letter == "M") {log.innerHTML += letter}
-    // if(letter == "N") {log.innerHTML += letter}
-    // if(letter == "O") {log.innerHTML += letter}
-    // if(letter == "P") {log.innerHTML += letter}
-    // if(letter == "Q") {log.innerHTML += letter}
-    // if(letter == "R") {log.innerHTML += letter}
-    // if(letter == "S") {log.innerHTML += letter}
-    // if(letter == "T") {log.innerHTML += letter}
-    // if(letter == "U") {log.innerHTML += letter}
-    // if(letter == "V") {log.innerHTML += letter}
-    // if(letter == "W") {log.innerHTML += letter}
-    // if(letter == "X") {log.innerHTML += letter}
-    // if(letter == "Y") {log.innerHTML += letter}
-    // if(letter == "Z") {log.innerHTML += letter}
+    if(letter == "A") {log.innerHTML += letter}
+    if(letter == "B") {log.innerHTML += letter}
+    if(letter == "C") {log.innerHTML += letter}
+    if(letter == "D") {log.innerHTML += letter}
+    if(letter == "E") {log.innerHTML += letter}
+    if(letter == "F") {log.innerHTML += letter}
+    if(letter == "G") {log.innerHTML += letter}
+    if(letter == "H") {log.innerHTML += letter}
+    if(letter == "I") {log.innerHTML += letter}
+    if(letter == "J") {log.innerHTML += letter}
+    if(letter == "K") {log.innerHTML += letter}
+    if(letter == "L") {log.innerHTML += letter}
+    if(letter == "M") {log.innerHTML += letter}
+    if(letter == "N") {log.innerHTML += letter}
+    if(letter == "O") {log.innerHTML += letter}
+    if(letter == "P") {log.innerHTML += letter}
+    if(letter == "Q") {log.innerHTML += letter}
+    if(letter == "R") {log.innerHTML += letter}
+    if(letter == "S") {log.innerHTML += letter}
+    if(letter == "T") {log.innerHTML += letter}
+    if(letter == "U") {log.innerHTML += letter}
+    if(letter == "V") {log.innerHTML += letter}
+    if(letter == "W") {log.innerHTML += letter}
+    if(letter == "X") {log.innerHTML += letter}
+    if(letter == "Y") {log.innerHTML += letter}
+    if(letter == "Z") {log.innerHTML += letter}
+
+    if(letter == "0") {log.innerHTML += letter}
+    if(letter == "1") {log.innerHTML += letter}
+    if(letter == "2") {log.innerHTML += letter}
+    if(letter == "3") {log.innerHTML += letter}
+    if(letter == "4") {log.innerHTML += letter}
+    if(letter == "5") {log.innerHTML += letter}
+    if(letter == "6") {log.innerHTML += letter}
+    if(letter == "7") {log.innerHTML += letter}
+    if(letter == "8") {log.innerHTML += letter}
+    if(letter == "9") {log.innerHTML += letter}
+
+    if(letter == "-") {log.innerHTML += letter}
+    if(letter == "_") {log.innerHTML += letter}
+    if(letter == "|") {log.innerHTML += letter}
+    if(letter == "+") {log.innerHTML += letter}
+    if(letter == "=") {log.innerHTML += letter}
+    if(letter == "(") {log.innerHTML += letter}
+    if(letter == ")") {log.innerHTML += letter}
+    if(letter == "[") {log.innerHTML += letter}
+    if(letter == "]") {log.innerHTML += letter}
+    if(letter == "{") {log.innerHTML += letter}
+    if(letter == "}") {log.innerHTML += letter}
+    if(letter == "!") {log.innerHTML += letter}
+    if(letter == "@") {log.innerHTML += letter}
+    if(letter == "#") {log.innerHTML += letter}
+    if(letter == "$") {log.innerHTML += letter}
+    if(letter == "%") {log.innerHTML += letter}
+    if(letter == "^") {log.innerHTML += letter}
+    if(letter == "&") {log.innerHTML += letter}
+    if(letter == "*") {log.innerHTML += letter}
+    if(letter == ";") {log.innerHTML += letter}
+    if(letter == ":") {log.innerHTML += letter}
+    if(letter == "'") {log.innerHTML += letter}
+    if(letter == ",") {log.innerHTML += letter}
+    if(letter == ".") {log.innerHTML += letter}
+    if(letter == "/") {log.innerHTML += letter}
+    if(letter == "<") {log.innerHTML += letter}
+    if(letter == ">") {log.innerHTML += letter}
+    if(letter == "?") {log.innerHTML += letter}
+
     
+
+    if(letter == " ") {
+        // var spacebar = document.querySelector('.code');
+        // spacebar.classList.replace("code-spacebar","blank");
+        log.innerHTML += " "
+    }
+
+
+
     if(letter == "Backspace") {
         var backspace=document.getElementById("log").innerText;
         backspace = backspace.substring(0, backspace.length - 1);
@@ -87,7 +141,8 @@ window.addEventListener("keydown", function(event) {
     }
 
     if(letter == "Enter") {
-        const search = document.getElementById("log").innerText;
+        const initSearch = document.getElementById("log").innerText;
+        const search = initSearch.toLowerCase();
         searchTerminal(search)
         const box = document.getElementById('log');
         const el = document.querySelector('.underscore');
@@ -100,7 +155,6 @@ window.addEventListener("keydown", function(event) {
         </div>
         `
     }
-
 });
 
 function searchTerminal (_search){

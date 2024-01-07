@@ -62,7 +62,7 @@ header {
   z-index: 10;
   background-color: var(--sidebar);
   bottom: 0;
-  height: 12vh;
+  height: 200px;
   overflow-y: auto;
   position: fixed;
   top: 0;
