@@ -1,34 +1,26 @@
-// fetch(`https://api.my-ip.io/v2/ip.json	`)
-// .then(userData => userData.json())
-// .then(userData => {
-// data.innerHTML +=
-// `
-// <p>Response. . . . . . . . . . . . . : ${userData.success}</p>
-// <p>Address type. . . . . . . . . . . : ${userData.type}</p>
-// <p>IPv4 Address. . . . . . . . . . . : ${userData.ip}</p>
-// <br>
-// <p>User Location</p>
-// <p>User time zone. . . . . . . . . . : ${userData.timeZone}</p>
-// <p>User region . . . . . . . . . . . : ${userData.region}</p>
-// <p>User city . . . . . . . . . . . . : ${userData.city}</p>
-// <p>Country code. . . . . . . . . . . : ${userData.country.code}</p>
-// <p>Country name. . . . . . . . . . . : ${userData.country.name}</p>
-// <br>
-// <p>User location . . . . . . . . . . : ${userData.location.lat} - ${userData.location.lon}</p>
-// <br>
-// <p>User autonomous system number (ASN)</p>
-// <p>Name. . . . . . . . . . . . . . . : ${userData.asn.name}</p>
-// <p>Number. . . . . . . . . . . . . . : ${userData.asn.number}</p>
-// <p>Network . . . . . . . . . . . . . : ${userData.asn.network}</p>
-// `
-// })
+var initCookie = document.cookie.indexOf('api=');
+console.log(initCookie)
 
+if (initCookie == -1){
+    console.log("NEW CALL")
+    // cookie does not exist
+    newAPI()
+}
+else if (initCookie >= 0) {
+    console.log("DON'T MAKE A CALL")
+    // cookie exists
+    oldAPI()
+    // switch these when the function works
+    // newAPI()
+}
+function setCookie(apiExpire) {
+    let date = new Date();
+    date.setTime(date.getTime() + (apiExpire * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = "api=true; " + expires + "; path=/";
+}
 window.addEventListener("keydown", function(event) {
     letter = event.key;
-    console.log(letter)
-
-    // var spacebar = document.querySelector('.code-spacebar');
-    // spacebar.classList.replace("code-spacebar","code");
 
     if(letter == "a") {log.innerHTML += letter}
     if(letter == "b") {log.innerHTML += letter}
@@ -124,22 +116,14 @@ window.addEventListener("keydown", function(event) {
     if(letter == ">") {log.innerHTML += letter}
     if(letter == "?") {log.innerHTML += letter}
 
-    
-
     if(letter == " ") {
-        // var spacebar = document.querySelector('.code');
-        // spacebar.classList.replace("code-spacebar","blank");
         log.innerHTML += " "
     }
-
-
-
     if(letter == "Backspace") {
         var backspace=document.getElementById("log").innerText;
         backspace = backspace.substring(0, backspace.length - 1);
         log.innerHTML = backspace;
     }
-
     if(letter == "Enter") {
         const initSearch = document.getElementById("log").innerText;
         const search = initSearch.toLowerCase();
@@ -155,6 +139,7 @@ window.addEventListener("keydown", function(event) {
         </div>
         `
     }
+    window.scrollBy(0, 100000);
 });
 
 function searchTerminal (_search){
@@ -162,6 +147,21 @@ function searchTerminal (_search){
     if(_search == "meow") {terminal.innerHTML += 
         `
         <br><p> I am not a cat</p><br>
+        `
+    }
+    else if(_search == "hello world") {terminal.innerHTML += 
+        `
+        <br><p class="hello-world"> Hello world</p><br>
+        `
+    }
+    else if(_search == "tos") {terminal.innerHTML += 
+        `
+        <br><p> The terms of service</p><br>
+        `
+    }
+    else if(_search == "cookies") {terminal.innerHTML += 
+        `
+        <br><p> the cookies</p><br>
         `
     }
     else if(_search == "log") {terminal.innerHTML += 
@@ -251,7 +251,7 @@ function searchTerminal (_search){
         <br>
         `
     }
-    else if(_search == "tempo") {terminal.innerHTML += 
+    else if(_search == "TEMP") {terminal.innerHTML += 
         `
         <br><br><p style="font-family: Dimitra;">user2</p><br>
         <p>credit: N/A</p>
@@ -266,7 +266,7 @@ function searchTerminal (_search){
     }
     else if(_search == "help") {terminal.innerHTML += 
         `
-        <br><p>all commands: help, download, meow, ip, log, contact, website, headbodyscript, romy, j</p><br>
+        <br><p>all commands: help, download, TOS, cookies, meow, ip, log, contact, website, hello world, headbodyscript, romy, j, him</p><br>
         `
     }
     else if (searchLength > 0) {
@@ -283,3 +283,95 @@ function searchTerminal (_search){
         `
     }
 }
+
+function newAPI() {
+console.log("New request")
+fetch(`https://api.my-ip.io/v2/ip.json`)
+    .then(userData => userData.json())
+    .then(userData => {
+    data.innerHTML =
+        `
+        <p>Response. . . . . . . . . . . . . : ${userData.success}</p>
+        <p>Address type. . . . . . . . . . . : ${userData.type}</p>
+        <p>IPv4 Address. . . . . . . . . . . : ${userData.ip}</p>
+        <br>
+        <p>User Location</p>
+        <p>User time zone. . . . . . . . . . : ${userData.timeZone}</p>
+        <p>User region . . . . . . . . . . . : ${userData.region}</p>
+        <p>User city . . . . . . . . . . . . : ${userData.city}</p>
+        <p>Country code. . . . . . . . . . . : ${userData.country.code}</p>
+        <p>Country name. . . . . . . . . . . : ${userData.country.name}</p>
+        <br>
+        <p>User location . . . . . . . . . . : ${userData.location.lat} - ${userData.location.lon}</p>
+        <br>
+        <p>User autonomous system number (ASN)</p>
+        <p>Name. . . . . . . . . . . . . . . : ${userData.asn.name}</p>
+        <p>Number. . . . . . . . . . . . . . : ${userData.asn.number}</p>
+        <p>Network . . . . . . . . . . . . . : ${userData.asn.network}</p>
+        `
+    document.cookie = `success=${userData.success}`;
+    document.cookie = `type=${userData.type}`;
+    document.cookie = `ip=${userData.ip}`;
+
+    document.cookie = `time=${userData.timeZone}`;
+    document.cookie = `region=${userData.region}`;
+    document.cookie = `city=${userData.city}`;
+    document.cookie = `code=${userData.country.code}`;
+    document.cookie = `country=${userData.country.name}`;
+
+    document.cookie = `lat=${userData.location.lat}`;
+    document.cookie = `lon=${userData.location.lon}`;
+
+    document.cookie = `name=${userData.asn.name}`;
+    document.cookie = `number=${userData.asn.number}`;
+    document.cookie = `network=${userData.asn.network}`;
+    
+    setCookie(1);
+
+    })
+}
+
+function oldAPI() {
+    // gives weird response
+    console.log("Using cookies")
+        var success = document.cookie.indexOf('success=');
+        var type = document.cookie.indexOf('type=');
+        var ip = document.cookie.indexOf('ip=');
+    
+        var time = document.cookie.indexOf('time=');
+        var region = document.cookie.indexOf('region=');
+        var city = document.cookie.indexOf('city=');
+        var code = document.cookie.indexOf('code=');
+        var country = document.cookie.indexOf('response=');
+    
+        var lat = document.cookie.indexOf('lat=');
+        var lon = document.cookie.indexOf('lon=');
+    
+        var nme = document.cookie.indexOf('name=');
+        var number = document.cookie.indexOf('number=');
+        var network = document.cookie.indexOf('network=');
+
+        data.innerHTML =
+            `
+            <p>Response. . . . . . . . . . . . . : ${success}</p>
+            <p>Address type. . . . . . . . . . . : ${type}</p>
+            <p>IPv4 Address. . . . . . . . . . . : ${ip}</p>
+            <br>
+            <p>User Location</p>
+            <p>User time zone. . . . . . . . . . : ${time}</p>
+            <p>User region . . . . . . . . . . . : ${region}</p>
+            <p>User city . . . . . . . . . . . . : ${city}</p>
+            <p>Country code. . . . . . . . . . . : ${code}</p>
+            <p>Country name. . . . . . . . . . . : ${country}</p>
+            <br>
+            <p>User location . . . . . . . . . . : ${lat} - ${lon}</p>
+            <br>
+            <p>User autonomous system number (ASN)</p>
+            <p>Name. . . . . . . . . . . . . . . : ${nme}</p>
+            <p>Number. . . . . . . . . . . . . . : ${number}</p>
+            <p>Network . . . . . . . . . . . . . : ${network}</p>
+            `
+}
+
+// the problem, when using oldAPI the data it get's are random numbers instead of the strong that it needs to be
+// What it should do is read the cookie and save that value to a var that is then read and written to data.innerHTML

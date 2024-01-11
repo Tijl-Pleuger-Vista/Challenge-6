@@ -67,6 +67,9 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   width: fit-content;
 }
+.hello-world  {
+  color: var(--warning);
+}
 .code {
   margin-left: 8px;
   color: var(--input);
