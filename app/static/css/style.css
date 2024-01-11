@@ -1,7 +1,8 @@
 body {
     background-color: rgb(31, 31, 31);
     color: rgb(243, 243, 243);
-    background-image: url(../img/bg.gif);
+    /* background-image: url(../img/bg.gif);
+    background-size: cover; */
 }
 
 header {

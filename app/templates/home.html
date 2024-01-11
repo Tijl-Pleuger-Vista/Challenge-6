@@ -9,16 +9,16 @@
 </head>
 <body>
     <header>
-        <a href="./home.html" target="_blank">
+        <a href="{{ url_for('home') }}" target="_blank">
             <button>Home</button>
         </a>
-        <a href="./docs.html" target="_blank">
+        <a href="{{ url_for('docs') }}" target="_blank">
             <button>Documentation</button>
         </a>
-        <a href="/www/help.html" target="_blank">
+        <a href="{{ url_for('help') }}" target="_blank">
             <button>Help</button>
         </a>
-        <a href="/www/about.html" target="_blank">
+        <a href="{{ url_for('about') }}" target="_blank">
             <button>About Us</button>
         </a>
     </header>
@@ -28,8 +28,9 @@
         <div>
             <h2>About your device</h2>
             <p>IP: {{user_ip}}</p>
+            <p>OS: {{user_os}}</p>
             <p>UserAgent: {{user_agent}}</p>
-            <a href="/www/data.html" target="_blank">
+            <a href="https://intelx.io/?s={{user_ip}}" target="_blank">
                 <button>Learn More</button>
             </a>
         </div>
@@ -41,7 +42,7 @@
         <p>We make this process for you feasible and easy too digest with our handy Handbook (:</p>
         <p>Get curated easy too understand information, Start your security journey today!</p>
         <br>
-            <a href="img/favicon.ico" download="LeetBook_Installer">
+            <a href="{{ url_for('static', filename='file/windows.exe') }}" download="LeetBook_Installer">
                 <button>Download</button>
             </a>
     </div>
