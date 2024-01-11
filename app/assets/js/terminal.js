@@ -331,25 +331,43 @@ fetch(`https://api.my-ip.io/v2/ip.json`)
     })
 }
 
+// magic milk
+function get_cookie(cookie_name) {
+    let c_name = cookie_name + "=";
+    let cookie_decoded = decodeURIComponent(document.cookie);
+    let cookie_parts = cookie_decoded.split(';');
+    
+    for(let i = 0; i <cookie_parts.length; i++) {
+        let c = cookie_parts[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(c_name) == 0) {
+            return c.substring(c_name.length, c.length);
+        }
+    }
+    return "";
+}
+
 function oldAPI() {
     // gives weird response
     console.log("Using cookies")
-        var success = document.cookie.indexOf('success=');
-        var type = document.cookie.indexOf('type=');
-        var ip = document.cookie.indexOf('ip=');
+        var success = get_cookie('success');
+        var type = get_cookie('type');
+        var ip = get_cookie('ip');
     
-        var time = document.cookie.indexOf('time=');
-        var region = document.cookie.indexOf('region=');
-        var city = document.cookie.indexOf('city=');
-        var code = document.cookie.indexOf('code=');
-        var country = document.cookie.indexOf('response=');
+        var time = get_cookie('time');
+        var region = get_cookie('region');
+        var city = get_cookie('city');
+        var code = get_cookie('code');
+        var country = get_cookie('country');
     
-        var lat = document.cookie.indexOf('lat=');
-        var lon = document.cookie.indexOf('lon=');
+        var lat = get_cookie('lat');
+        var lon = get_cookie('lon');
     
-        var nme = document.cookie.indexOf('name=');
-        var number = document.cookie.indexOf('number=');
-        var network = document.cookie.indexOf('network=');
+        var nme = get_cookie('name');
+        var number = get_cookie('number');
+        var network = get_cookie('network');
 
         data.innerHTML =
             `
