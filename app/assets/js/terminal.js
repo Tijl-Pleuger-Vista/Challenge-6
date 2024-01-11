@@ -373,5 +373,5 @@ function oldAPI() {
             `
 }
 
-// the problem, when using oldAPI the data it get's are random numbers instead of the strong that it needs to be
-// What it should do is read the cookie and save that value to a var that is then read and written to data.innerHTML
+// the problem, when using the function oldAPI (the one above) the data it gets are random numbers instead of the string that it needs to be
+// What it should do is read the cookie and save that value to a var that is then read and written to data.innerHTML    
