@@ -1,24 +1,19 @@
+// initialize the cookie into a var
 var initCookie = document.cookie.indexOf('api=');
-console.log(initCookie)
 
-if (initCookie == -1){
-    console.log("NEW CALL")
-    // cookie does not exist
-    newAPI()
-}
-else if (initCookie >= 0) {
-    console.log("DON'T MAKE A CALL")
-    // cookie exists
-    oldAPI()
-    // switch these when the function works
-    // newAPI()
-}
+if (initCookie == -1){newAPI()}
+else if (initCookie >= 0) {oldAPI()}
+
+// set expiration date of the init cookie
 function setCookie(apiExpire) {
     let date = new Date();
     date.setTime(date.getTime() + (apiExpire * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = "api=true; " + expires + "; path=/";
 }
+
+// inefficient way to to log all keys
+// should use regex instead
 window.addEventListener("keydown", function(event) {
     letter = event.key;
 
@@ -142,6 +137,7 @@ window.addEventListener("keydown", function(event) {
     window.scrollBy(0, 100000);
 });
 
+// all search queries
 function searchTerminal (_search){
     let searchLength = _search.length;
     if(_search == "meow") {terminal.innerHTML += 
@@ -149,19 +145,22 @@ function searchTerminal (_search){
         <br><p> I am not a cat</p><br>
         `
     }
+    else if(_search == "tos" || _search == "terms of service" ) {terminal.innerHTML += 
+        `
+        <br><p> Terms of service (TOS)</p>
+        <p> Everything under the HeadBodyScript™ will be considered property of the organization</p>
+        <p> No information of the user will be saved on a database. All data is saved locally on your device</p>
+        <p> You may share and use the contents of the website at your own risk</p><br>
+        `
+    }
     else if(_search == "hello world") {terminal.innerHTML += 
         `
         <br><p class="hello-world"> Hello world</p><br>
         `
     }
-    else if(_search == "tos") {terminal.innerHTML += 
-        `
-        <br><p> The terms of service</p><br>
-        `
-    }
     else if(_search == "cookies") {terminal.innerHTML += 
         `
-        <br><p> the cookies</p><br>
+        <br><p> This website uses cookies to temporarily save data</p><br>
         `
     }
     else if(_search == "log") {terminal.innerHTML += 
@@ -174,24 +173,36 @@ function searchTerminal (_search){
         <br><p> download stuff</p><br>
         `
     }
-    else if(_search == "ip") {terminal.innerHTML += 
-        `
-        <br><p> put the userData response here</p><br>
-        `
+    else if(_search == "ip") {
+        var success = get_cookie('success');
+        var type = get_cookie('type');
+        var ip = get_cookie('ip');
+    
+        var time = get_cookie('time');
+        var region = get_cookie('region');
+        var city = get_cookie('city');
+        var code = get_cookie('code');
+        var country = get_cookie('country');
+    
+        terminal.innerHTML +=
+            `
+            <br><p>Response. . . . . . . . . . . . . : ${success}</p>
+            <p>Address type. . . . . . . . . . . : ${type}</p>
+            <p>IPv4 Address. . . . . . . . . . . : ${ip}</p>
+            <br>
+            <p>User Location</p>
+            <p>User time zone. . . . . . . . . . : ${time}</p>
+            <p>User region . . . . . . . . . . . : ${region}</p>
+            <p>User city . . . . . . . . . . . . : ${city}</p>
+            <p>Country code. . . . . . . . . . . : ${code}</p>
+            <p>Country name. . . . . . . . . . . : ${country}</p><br>
+            `
     }
     else if(_search == "contact") {terminal.innerHTML += 
         `
-        <br><p> put the userData response here</p><br>
-        `
-    }
-    else if(_search == "cookies") {terminal.innerHTML += 
-        `
-        <br><p> put the userData response here</p><br>
-        `
-    }
-    else if(_search == "tos") {terminal.innerHTML += 
-        `
-        <br><p> terms and conditions</p><br>
+        <br><p> Email:</p>
+        <p> Phone number:</p>
+        <p> FAX:</p><br>
         `
     }
     else if(_search == "faq") {terminal.innerHTML += 
@@ -251,7 +262,7 @@ function searchTerminal (_search){
         <br>
         `
     }
-    else if(_search == "TEMP") {terminal.innerHTML += 
+    else if(_search == "temp") {terminal.innerHTML += 
         `
         <br><br><p style="font-family: Dimitra;">user2</p><br>
         <p>credit: N/A</p>
@@ -284,8 +295,8 @@ function searchTerminal (_search){
     }
 }
 
+// new API request that uses the response as data
 function newAPI() {
-console.log("New request")
 fetch(`https://api.my-ip.io/v2/ip.json`)
     .then(userData => userData.json())
     .then(userData => {
@@ -331,7 +342,7 @@ fetch(`https://api.my-ip.io/v2/ip.json`)
     })
 }
 
-// magic milk
+// read cookie data based on name
 function get_cookie(cookie_name) {
     let c_name = cookie_name + "=";
     let cookie_decoded = decodeURIComponent(document.cookie);
@@ -349,9 +360,8 @@ function get_cookie(cookie_name) {
     return "";
 }
 
+// use cookies to read and write data
 function oldAPI() {
-    // gives weird response
-    console.log("Using cookies")
         var success = get_cookie('success');
         var type = get_cookie('type');
         var ip = get_cookie('ip');
@@ -390,6 +400,3 @@ function oldAPI() {
             <p>Network . . . . . . . . . . . . . : ${network}</p>
             `
 }
-
-// the problem, when using the function oldAPI (the one above) the data it gets are random numbers instead of the string that it needs to be
-// What it should do is read the cookie and save that value to a var that is then read and written to data.innerHTML    
