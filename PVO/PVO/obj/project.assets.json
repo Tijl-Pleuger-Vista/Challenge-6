@@ -475,19 +475,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vista college\\.nuget\\packages\\": {}
+    "C:\\Users\\HeadB\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vista college\\Documents\\GitHub\\project-6\\PVO\\PVO\\PVO.csproj",
+      "projectUniqueName": "C:\\Users\\HeadB\\OneDrive\\Documents\\GitHub\\project-6\\PVO\\PVO\\PVO.csproj",
       "projectName": "PVO",
-      "projectPath": "C:\\Users\\Vista college\\Documents\\GitHub\\project-6\\PVO\\PVO\\PVO.csproj",
-      "packagesPath": "C:\\Users\\Vista college\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vista college\\Documents\\GitHub\\project-6\\PVO\\PVO\\obj\\",
+      "projectPath": "C:\\Users\\HeadB\\OneDrive\\Documents\\GitHub\\project-6\\PVO\\PVO\\PVO.csproj",
+      "packagesPath": "C:\\Users\\HeadB\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HeadB\\OneDrive\\Documents\\GitHub\\project-6\\PVO\\PVO\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Vista college\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HeadB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -541,7 +546,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
