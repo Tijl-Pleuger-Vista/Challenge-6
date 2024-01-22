@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PVO"
         mc:Ignorable="d"
-        Title="1337 HandB00K" WindowState="Maximized" WindowStyle="None" Background="#1E1E1E" Loaded="Window_Loaded">
+        Title="1337 HandB00K" WindowState="Maximized" WindowStyle="None" Background="#1E1E1E" Loaded="Window_Loaded" Width="1366" Height="768">
 
     <Grid Margin="0,0,10,-6">
         <Grid.RowDefinitions>
@@ -17,7 +17,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button x:Name="B4" Background="Transparent" Margin="45,672,1249,27" Click="Close_App"  MaxWidth="200" MaxHeight="50" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
-            <Image Source="C:\Users\Vista college\Downloads\kisspng-computer-icons-button-clip-art-turn-off-ico-download-5ab0e701122e40.5245317115215429130745.png"></Image>
+            <Image x:Name="ShutDown"></Image>
         </Button>
 
         <Rectangle Grid.Column="1" MaxWidth="300"  MinWidth="300" Margin="1014,38,20,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">

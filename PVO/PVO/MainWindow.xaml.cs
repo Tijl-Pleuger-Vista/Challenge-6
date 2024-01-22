@@ -42,7 +42,8 @@ namespace PVO
             SecondIcon.Source = new BitmapImage(new Uri(testimg + "\\img\\icons8-web-shield-48.png"));
             ThirdIcon.Source = new BitmapImage(new Uri(testimg + "\\img\\icons8-local-network-64.png"));
             FourthIcon.Source = new BitmapImage(new Uri(testimg + "\\img\\icons8-security-configuration-48.png"));
-            
+            ShutDown.Source = new BitmapImage(new Uri(testimg + "\\img\\off.png"));
+
 
 
         }
@@ -106,33 +107,10 @@ namespace PVO
         }
 
 
-            private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-            {
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-
-               
-           
-
-            //static async Task Chat(string[] args)
-            //{
-            //    //authApi
-            //    var authentication = new APIAuthentication("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");
-            //    var api = new OpenAIAPI(authentication);
-
-            //    // Start a neew chat
-            //    var conversation = api.Chat.CreateConversation();
-
-            //    // Add user input and receive a reply from ChatGPT
-            //    conversation.AppendUserInput("YOUR_INPUT_HERE");
-
-            //    var response = await conversation.GetResponseFromChatbot();
-
-            //    String user_input = tex
-
-
-            //}
-            
-            }
+        }
 
 
 
