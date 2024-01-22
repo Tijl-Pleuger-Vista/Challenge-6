@@ -1,10 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "gT8FXJlECOAc6ZXDP2Qa0fla7nnBg6FmBJiN/A4vWa5MLGLRMZ6j9rad7YVhyISyyNG/Ckla0NVNICsE3ppyVQ==",
+  "dgSpecHash": "z0RykGjN+9HvQoMpuGlQR6PE/Y2FuoAwhl62/U/So4cSAeEY6xPbvYyM4Hpr0Cn+X2fr1NhzAFuvj2k5ROQ/Wg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vista college\\source\\repos\\PVO\\PVO\\PVO.csproj",
+  "projectFilePath": "C:\\Users\\Vista college\\Documents\\GitHub\\project-6\\PVO\\PVO\\PVO.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vista college\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.configuration\\2.1.0\\microsoft.extensions.configuration.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.1.0\\microsoft.extensions.configuration.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.configuration.binder\\2.1.0\\microsoft.extensions.configuration.binder.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.http\\2.1.0\\microsoft.extensions.http.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.logging\\2.1.0\\microsoft.extensions.logging.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.1.0\\microsoft.extensions.logging.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.options\\2.1.0\\microsoft.extensions.options.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\microsoft.extensions.primitives\\2.1.0\\microsoft.extensions.primitives.2.1.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\openai\\1.10.0\\openai.1.10.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
+    "C:\\Users\\Vista college\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
