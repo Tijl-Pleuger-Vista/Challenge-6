@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PVO"
         mc:Ignorable="d"
-        Title="1337 HandB00K" WindowState="Maximized" WindowStyle="None" Background="#1E1E1E">
+        Title="1337 HandB00K" WindowState="Maximized" WindowStyle="None" Background="#1E1E1E" Loaded="Window_Loaded">
 
     <Grid Margin="0,0,10,-6">
         <Grid.RowDefinitions>
@@ -54,7 +54,7 @@
         <Menu Grid.Column="1" Margin="35,108,1239,567" Grid.Row="1" Background="Transparent">
             <MenuItem Width="74">
                 <MenuItem.Header>
-                    <Image  Source="C:\Users\Vista college\source\repos\PVO\PVO\img\World.png" Width="59" Height="60" RenderTransformOrigin="0.5,0.508"  />
+                    <Image x:Name="FirstIcon" Width="59" Height="60" RenderTransformOrigin="0.5,0.508"  />
                 </MenuItem.Header>
                 <MenuItem Click="Internet" Header="About the internet">
                 </MenuItem>
@@ -65,7 +65,7 @@
         <Menu Grid.Column="1" Margin="35,253,1239,422" Grid.Row="1" Background="Transparent">
             <MenuItem Width="74">
                 <MenuItem.Header>
-                    <Image  Source="C:\Users\Vista college\Downloads\icons8-web-shield-48.png" Width="59" Height="60"  />
+                    <Image  x:Name="SecondIcon" Width="59" Height="60"  />
                 </MenuItem.Header>
                 <MenuItem Click="Security" Header="About your security">
                 </MenuItem>
@@ -76,7 +76,7 @@
         <Menu Grid.Column="1" Margin="35,390,1239,285" Grid.Row="1" Background="Transparent">
             <MenuItem Width="74">
                 <MenuItem.Header>
-                    <Image  Source="C:\Users\Vista college\Downloads\icons8-local-network-64.png" Width="59" Height="60"  />
+                    <Image x:Name="ThirdIcon" Width="59" Height="60"  />
                 </MenuItem.Header>
                 <MenuItem Header="Open">
                     <MenuItem Header="Open2">
@@ -90,7 +90,7 @@
         <Menu Grid.Column="1" Margin="35,534,1239,141" Grid.Row="1" Background="Transparent">
             <MenuItem Width="74">
                 <MenuItem.Header>
-                    <Image  Source="C:\Users\Vista college\Downloads\icons8-security-configuration-48.png" Width="59" Height="60"  />
+                    <Image x:Name="FourthIcon" Width="59" Height="60"  />
                 </MenuItem.Header>
                 <MenuItem Header="Open">
                     <MenuItem Header="Open2">
@@ -102,8 +102,10 @@
 
         <TextBlock x:Name="MainText" Grid.Column="1" HorizontalAlignment="Left" Margin="186,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="581" Width="764" FontSize="25px" Foreground="White"  ><Run Language="en-gb" Text="Welcome"/></TextBlock>
 
-        <TextBlock x:Name="Chatbox" Grid.Column="1" HorizontalAlignment="Left" Margin="1045,70,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Hello" VerticalAlignment="Top" Height="460" Width="251" Foreground="White" />
-        
+        <!--<TextBlock x:Name="Chatbox" Grid.Column="1" HorizontalAlignment="Left" Margin="1045,70,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Hello" VerticalAlignment="Top" Height="460" Width="251" Foreground="White" />-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2">
+            <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="HELLO WORD" Foreground="White" />
+        </ScrollViewer>
 
 
 
