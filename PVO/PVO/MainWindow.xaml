@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PVO"
         mc:Ignorable="d"
-        Title="1337 HandB00K" WindowState="Maximized" WindowStyle="None" Background="#1E1E1E" Loaded="Window_Loaded" Width="1366" Height="768">
-
-    <Grid Margin="0,0,10,-6">
+        Title="1337 HandB00K"  Background="#1E1E1E" Loaded="Window_Loaded" >
+    <Viewbox Stretch="Uniform">
+        <Grid Margin="0,0,10,-6">
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
             <RowDefinition/>
@@ -110,6 +110,7 @@
 
 
     </Grid>
+    </Viewbox>
 
 
 </Window>
