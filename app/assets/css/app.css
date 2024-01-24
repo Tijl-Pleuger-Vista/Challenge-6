@@ -92,9 +92,8 @@ button, input[type="submit"], input[type="reset"] {
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
-    height: 0;
-    height: 62%;
-    width: 500px;
+    height: 600px;
+    width: 800px;
     position: absolute;
     right: 100px;
     top: 165px;
@@ -108,9 +107,6 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
 }
-/* footer  div div {
-    margin-left: 20px;
-} */
 h1  {
     margin: 0;
 }
@@ -149,3 +145,53 @@ p   {
 .bi-moon-stars-fill:hover{
     opacity: 1;
 }
+.bi-geo-alt-fill,
+.bi-telephone-fill,
+.bi-twitter,
+.bi-linkedin{
+    position: relative;
+    bottom: 2px;
+    margin-right: 2px;
+}
+.bi-envelope-fill{
+    position: relative;
+    bottom: 1px;
+    margin-right: 2px;  
+}
+.subject{
+    font-size: x-large;
+}
+.subject li{
+    font-size: medium;
+}
+.section{
+    position: relative;
+    top: 100px;
+    left: 160px;
+    width: fit-content;
+}
+body::-webkit-scrollbar {
+    width: 6px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+  
+  .scrollbar::-webkit-scrollbar {
+    width: 6px;               /* width of the entire scrollbar */
+  }
+  
+  .scrollbar::-webkit-scrollbar-track {
+    background: none;        /* color of the tracking area */
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }

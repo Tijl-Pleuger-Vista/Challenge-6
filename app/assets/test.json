@@ -1,0 +1,16 @@
+{
+    "category_subcategory": [
+      {
+        "title": "sql injection",
+        "level": "2",
+        "risk": "5",
+        "xp": "10",
+        "summary": "sql injection is an attack where the user can tamper with the sql request send by the server too return, delete, add data that wasn't intended",
+        "problem": "unsafe user input that is added too the sql query",
+        "solution": "use prepared sql statements on your backend and sanitize user input by escaping and formating it",
+        "examples": "bvb een slider of iets dat je hier voorbeelden van kan zien in meerdere programmeer talen",
+        "resources": " bvb library's of tooltjes wat kan helpen met het probleem"
+        
+      }
+    ]
+  }

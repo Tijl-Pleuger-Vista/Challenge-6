@@ -34,12 +34,12 @@
     <header>
         <div class="card">
             <img src="assets/content/logo/init/android-chrome-192x192.png" alt="Logo">
-            <strong><a href="app.html">Leet Handbook</a></strong>
+            <strong><button id="home" onclick="btnScroll(this.id)">Leet Handbook</button></strong>
         </div>
         <ul class="card">
-            <li><a href="app.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="download.html">Download</a></li>
+            <li><button id="home" onclick="btnScroll(this.id)">Home</button></li>
+            <li><button id="about" onclick="btnScroll(this.id)">About</button></li>
+            <li><button id="download" onclick="btnScroll(this.id)">Download</button></li>
         </ul>
         <ul class="card">
             <li>
@@ -54,32 +54,34 @@
                       </svg>
                 </button>
             </li>
-            <li><a href="login.html">Login</a></li>
+            <li><button id="login" onclick="btnScroll(this.id)">Login</button></li>
             <li>EXPs</li>
         </ul>
     </header>
 
-    <div class="box">
+    <div class="box" id="box">
 
     </div>
-    <strong>Subjects</strong>
-    <ul>Cloud
-        <li>Website</li>
-        <li>Server</li>
-        <li>Database</li>
-    </ul>
-    <ul>Firewall
-        <li>Router</li>
-        <li>Webapplication</li>
-    </ul>
-    <ul>Network
-        <li>Guest-Network</li>
-        <li>Private-Network</li>
-    </ul>
-    <ul> Opsec
-        <li>Authentication</li>
-        <li>Data-Storage</li>
-    </ul>
+    <div class="section">
+        <strong>Subjects</strong>
+        <ul class="subject">Cloud
+            <li><button id="website" onclick="write()">Website</button></li>
+            <li><button id="server" onclick="btnScroll(this.id)">Server</button></li>
+            <li><button id="database" onclick="btnScroll(this.id)">Database</button></li>
+        </ul>
+        <ul class="subject">Firewall
+            <li><button id="router" onclick="btnScroll(this.id)">Router</button></li>
+            <li><button id="webapplication" onclick="btnScroll(this.id)">Webapplication</button></li>
+        </ul>
+        <ul class="subject">Network
+            <li><button id="guestNetwork" onclick="btnScroll(this.id)">Guest-Network</button></li>
+            <li><button id="privateNetwork" onclick="btnScroll(this.id)">Private-Network</button></li>
+        </ul>
+        <ul class="subject"> Opsec
+            <li><button id="authentication" onclick="btnScroll(this.id)">Authentication</button></li>
+            <li><button id="dataStorage" onclick="btnScroll(this.id)">Data-Storage</button></li>
+        </ul>
+    </div>
     <footer>
         <div class="f-1">
             <h1>Contact us</h1>
