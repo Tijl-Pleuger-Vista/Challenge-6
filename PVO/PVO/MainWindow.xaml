@@ -16,11 +16,8 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="B4" Background="Transparent" Margin="45,672,1249,27" Click="Close_App"  MaxWidth="200" MaxHeight="50" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
-            <Image x:Name="ShutDown"></Image>
-        </Button>
 
-        <Rectangle Grid.Column="1" MaxWidth="300"  MinWidth="300" Margin="1014,38,20,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
+            <Rectangle Grid.Column="1" MaxWidth="300"  MinWidth="300" Margin="1014,38,20,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
             <Rectangle.Effect>
                 <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
             </Rectangle.Effect>
@@ -43,7 +40,6 @@
                 <SolidColorBrush Color="#161616" />
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle Fill="White"  Margin="1004,23,344,40" Grid.Column="1" Grid.Row="1" RadiusX="4" RadiusY="4" Opacity="0.2" />
         <Rectangle Grid.Column="1" Panel.ZIndex="-1" Margin="20,70,1232,98" Grid.Row="1" RadiusX="56" RadiusY="56" Fill="#161616">
             <Rectangle.Effect>
                 <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
@@ -51,7 +47,7 @@
         </Rectangle>
 
         <!--FIRST MENU ICON-->
-        <Menu Grid.Column="1" Margin="35,108,1239,567" Grid.Row="1" Background="Transparent">
+        <Menu Grid.Column="1" Margin="33,108,1239,567" Grid.Row="1" Background="Transparent">
             <MenuItem Width="74">
                 <MenuItem.Header>
                     <Image x:Name="FirstIcon" Width="59" Height="60" RenderTransformOrigin="0.5,0.508"  />
@@ -62,7 +58,7 @@
         </Menu>
 
         <!--SECOND MENU ICON-->
-        <Menu Grid.Column="1" Margin="35,253,1239,422" Grid.Row="1" Background="Transparent">
+        <Menu Grid.Column="1" Margin="33,253,1239,422" Grid.Row="1" Background="Transparent">
             <MenuItem Width="74">
                 <MenuItem.Header>
                     <Image  x:Name="SecondIcon" Width="59" Height="60"  />
@@ -73,7 +69,7 @@
         </Menu>
 
         <!--THIRD MENU ICON-->
-        <Menu Grid.Column="1" Margin="35,390,1239,285" Grid.Row="1" Background="Transparent">
+        <Menu Grid.Column="1" Margin="33,390,1239,285" Grid.Row="1" Background="Transparent">
             <MenuItem Width="74">
                 <MenuItem.Header>
                     <Image x:Name="ThirdIcon" Width="59" Height="60"  />
@@ -87,7 +83,7 @@
         </Menu>
 
         <!--FOURTH MENU ICON-->
-        <Menu Grid.Column="1" Margin="35,534,1239,141" Grid.Row="1" Background="Transparent">
+        <Menu Grid.Column="1" Margin="33,534,1239,141" Grid.Row="1" Background="Transparent">
             <MenuItem Width="74">
                 <MenuItem.Header>
                     <Image x:Name="FourthIcon" Width="59" Height="60"  />
@@ -100,16 +96,17 @@
             </MenuItem>
         </Menu>
 
-        <TextBlock x:Name="MainText" Grid.Column="1" HorizontalAlignment="Left" Margin="186,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="581" Width="764" FontSize="25px" Foreground="White"  ><Run Language="en-gb" Text="Welcome"/></TextBlock>
+        <!--<TextBlock x:Name="MainText" Grid.Column="1" HorizontalAlignment="Left" Margin="186,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="581" Width="764" FontSize="25px" Foreground="White"  ><Run Language="en-gb" Text="Welcome"/></TextBlock>-->
 
         <!--<TextBlock x:Name="Chatbox" Grid.Column="1" HorizontalAlignment="Left" Margin="1045,70,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Hello" VerticalAlignment="Top" Height="460" Width="251" Foreground="White" />-->
-        <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
             <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="HELLO WORD" Foreground="White" />
         </ScrollViewer>
+            <TextBlock x:Name="MainText" FontSize="20" TextWrapping="Wrap" Text="Welcome too the Leet Book" Foreground="White" Grid.ColumnSpan="2" Margin="192,70,402,85" Grid.RowSpan="2" />
 
 
 
-    </Grid>
+        </Grid>
     </Viewbox>
 
 

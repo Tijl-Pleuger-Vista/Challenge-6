@@ -24,16 +24,19 @@ using System.Reflection.Metadata;
 using Path = System.IO.Path;
 using System.Reflection;
 
-
 namespace PVO
 {
-    
+
     public partial class MainWindow : Window
     {
-        string solutionDir = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-        string testimg = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+        //string solutionDir = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+        //string testimg = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+        string testimg = "C:\\Program Files (x86)\\Vista college\\LeenBook\\";
+        string solutionDir = "C:\\Program Files (x86)\\Vista college\\LeenBook\\";
 
-        
+
+
+
 
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -42,7 +45,6 @@ namespace PVO
             SecondIcon.Source = new BitmapImage(new Uri(testimg + "\\img\\icons8-web-shield-48.png"));
             ThirdIcon.Source = new BitmapImage(new Uri(testimg + "\\img\\icons8-local-network-64.png"));
             FourthIcon.Source = new BitmapImage(new Uri(testimg + "\\img\\icons8-security-configuration-48.png"));
-            ShutDown.Source = new BitmapImage(new Uri(testimg + "\\img\\off.png"));
 
 
 
@@ -52,21 +54,33 @@ namespace PVO
         private void Close_App(object sender, RoutedEventArgs e)
         {
             Close();
-            
+
 
         }
 
 
         public class Person
-        {
-            public string? FirstName { get; set; } 
+        { /*Json names (firstlayer)*/
+            public string? FirstName { get; set; }
             public string? LastName { get; set; }
             public string? JobTitle { get; set; }
 
-
+            public Category_subcategory[]? category_subcategory1 { get; set; }
 
         }
+        public class Category_subcategory
+        { /*Json names (Secondlayer)*/
+            public string? title { get; set; }
+            public string? level { get; set; }
+            public string? risk { get; set; }
+            public string? xp { get; set; }
+            public string? summary { get; set; }
+            public string? problem { get; set; }
+            public string? solution { get; set; }
+            public string? examples { get; set; }
+            public string? resources { get; set; }
 
+        }
 
 
         public static void Test()
@@ -76,23 +90,34 @@ namespace PVO
             string text = File.ReadAllText(path);
                 var person = JsonSerializer.Deserialize<Person>(text);
 
-            Console.WriteLine($"First name: {person.FirstName}");
-                Console.WriteLine($"Last name: {person.LastName}");
-                Console.WriteLine($"Job title: {person.JobTitle}");
-                Trace.WriteLine($"First name: {person.FirstName}");
-            
 
         }
 
 
         public void Internet(object sender, RoutedEventArgs e)
         {
-
+            //read the json
             string text = File.ReadAllText(solutionDir  +"\\Json\\person.json");
 
+            //deserialise(make it into string for the person class variables)
             var person = JsonSerializer.Deserialize<Person>(text);
 
-            this.MainText.Text = person.FirstName + Environment.NewLine + person.JobTitle ;
+
+
+
+
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+            this.MainText.Text = person.JobTitle;
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+            this.MainText.Text = person.category_subcategory1[0].title;
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+
+
+
+
+
+
 
 
 
@@ -104,7 +129,9 @@ namespace PVO
 
             var person = JsonSerializer.Deserialize<Person>(text);
 
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             this.MainText.Text = person.LastName;
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
         }
 
@@ -116,12 +143,12 @@ namespace PVO
 
 
 
-        public void OnKeyDown(object sender, KeyEventArgs e)
+        public async void OnKeyDown(object sender, KeyEventArgs e)
         {
             
             if (e.Key == Key.Enter)
             {
-                chatr();
+               await chatr();
 
 
 
@@ -136,7 +163,7 @@ namespace PVO
             string user_input = UserInput.Text;
 
             //authApi
-            var authentication = new APIAuthentication("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");
+            var authentication = new APIAuthentication("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");
             var api = new OpenAIAPI(authentication);
 
             // Start a neew chat
@@ -145,7 +172,7 @@ namespace PVO
             // Add user input and receive a reply from ChatGPT
             conversation.AppendUserInput(user_input);
 
-            var response = await conversation.GetResponseFromChatbot();
+            var response = await conversation.GetResponseFromChatbotAsync();
             
             Chatbox.Text = response;
 
