@@ -1,0 +1,48 @@
+BPV Challenge [6]
+Company:  Platform Veilig Ondernemen (PVO)
+
+All assisted members:
+  Main:
+      (Phone number will not be given away since this is private information)
+    Dania [207362@vistacollege.nl] Groepswerker
+    Jee [519651@vistacollege.nl] Afmaker
+    Tayfun  [509449@vistacollege.nl] Bedenker
+    Tijl  [400927@vistacollege.nl] Voorzitter, Waarschuwer
+
+  Other + contribution:
+    Romy [Testing of main website]
+    Winston [Testing of main app]
+
+Contract:
+  1. Each member will arrive at the agreed upon location on time
+      - if unsuccessful to do so this will be noted down in the stand-up
+  2. Each member agrees to communicate through one of the following mediums:
+      - Whatsapp
+      - Outlook
+      - Teams
+      - Discord
+      - SMS
+  3. Each member agrees that they will use Github as a medium to share files
+  4. Each member agrees that they will push their latest update (regardless if it is finished) at the end of the day
+  5. Each member agrees to communicate if they are unsuccessful to complete their tasks
+  6. Each member agrees to document their work in at least one of the following ways:
+      - Notes.txt
+      - Pictures
+      - Update messages on any of the mentioned communication mediums
+      - Word
+  7. Each member agrees to add comments to their code
+      Add comments to explain:
+      - What your code does
+      - Things you learned
+      - Difficult techniques
+      - Links to documentation, videos, posts, reddit or other media that was used to write (or copy) your code
+      - What value a variable has and what it does
+  8. Each member agrees that documentation will be done in English and Dutch
+  9. Each member agrees to update their own stand-up section at the end of each day
+  10.Each member agrees to write code in the following way
+      - Good structure (use prettify if needed)
+      - variables will be written in Lower Camel Case
+      - if a variable is given to a function [function myFunction(someVariable)] this variable will be given an underscore
+      This is to identify in what scope this variable is used
+
+By accepting the Github invitation you automatically agree to these terms
