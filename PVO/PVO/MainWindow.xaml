@@ -129,10 +129,11 @@
 
 
 
-
+                
 
             </ScrollViewer>
 
+            <Button Style="{DynamicResource lvl1btn}" x:Name="Level1" Content="Level 1" Grid.Column="1" Margin="1120,170,126,529" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Visible"/>  
 
 
 

@@ -30,8 +30,8 @@ namespace PVO
 
     public partial class MainWindow : Window
     {
-        string imgs = "C:\\Program Files (x86)\\Vista college\\LeenBook\\";
-        string solutionDir = "C:\\Program Files (x86)\\Vista college\\LeenBook\\";
+        string imgs = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
+        string solutionDir = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
 
 
 
@@ -104,6 +104,7 @@ namespace PVO
             this.ExamplesTitle.Text = "Examples";
             this.ResourcesTitle.Text = "Resources";
 
+            this.Level1.Visibility = Visibility.Visible ;
 
 
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
@@ -184,7 +185,10 @@ namespace PVO
             this.ResourcesTitle.Text = null;
         }
 
+        private void Level1_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
 
+        }
     }
 
 
