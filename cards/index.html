@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Home - Leet handbook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/app.js"></script>
 </head>
-<body>
+<body id="contrast" class="light">
     <header class="header-row space-around">
         <div class="row height">
-            <button><img src="original.png" alt=""></button>
+            <button><img src="assets/logo/android-chrome-512x512.png" alt=""></button>
             <button><h1 class="logo-text">Leet Handbook</h1></button>
         </div>
         <div class="height">
@@ -48,7 +48,8 @@
     </header>
     <div>
         <div class="card">
-            <div class="card-content">
+            <div class="card-content contrast-100">
+                <img src="temp.jpg" alt="" style="height: 300px; width: 200px;">
                 <div class="row space-around">
                     <ul class="list">
                         <h2>LIST</h2>
@@ -98,7 +99,7 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-content column">
+            <div class="card-content column contrast-100">
                 <div class="square center column">
                     <h1>OVER ONS</h1>
                     <h2>Wij zijn veiligheidsversterkers</h2>
@@ -140,12 +141,12 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-content">
+            <div class="card-content contrast-100">
                 Open Leet Handbook or download the app
             </div>
         </div>
         <div class="card white">
-            <div class="card-content column white">
+            <div class="card-content column white contrast-100">
                 <h1 style="font-size: 80px; margin-bottom: 20px;">The Handbook For Your Desktop!</h1>
                 <h2>Keep track of your progress and learn while you are offline</h2>
                 <h2>Our app updates when you connect to the internet to keep you up to date on the latest security threats</h2>
@@ -158,9 +159,9 @@
         <div class="row">
             <ul>
                 <h3>Contact us</h3>
-                <li><i class="bi bi-geo-alt-fill"></i>Heerlen, Breukerweg 200</li>
-                <li><i class="bi bi-telephone-fill"></i>045 523 2576</li>
-                <li><i class="bi bi-envelope-fill"></i>pvo.help@gmail.com</li>
+                <li class="tooltip"><a href="https://www.google.com/maps/place/Breukerweg+200,+6412+ZL+Heerlen/@50.9049177,5.9436252,17z/data=!3m1!4b1!4m6!3m5!1s0x47c0be80382293b7:0xc04ecfe224df6dec!8m2!3d50.9049177!4d5.9436252!16s%2Fg%2F11bw3zzzss?entry=ttu" target="_blank"><i class="bi bi-geo-alt-fill"></i>Heerlen, Breukerweg 200</a><span class="tooltiptext">Click To Open Google Maps</span></li>
+                <li class="tooltip"><button onclick="copyPhone()"><i class="bi bi-telephone-fill"></i>045 523 2576</button><span class="tooltiptext">Click To Copy</span></li>
+                <li class="tooltip"><i class="bi bi-envelope-fill"></i>pvo.help@gmail.com<span class="tooltiptext">Click To Open Mail</span></li>
             </ul>
         </div>
         <div class="row">
@@ -174,8 +175,8 @@
         <div class="row">
             <ul>
                 <h3>Platform Veilig Ondernemen</h3>
-                <li><i class="bi bi-twitter"></i>Twitter</li>
-                <li><i class="bi bi-linkedin"></i>Linked-IN</li>
+                <li class="tooltip"><a href="https://twitter.com/home" target="_blank"><i class="bi bi-twitter"></i>Twitter</a><span class="tooltiptext">Click To Open Twitter</span></li>
+                <li class="tooltip"><a href="https://www.linkedin.com/" target="_blank"></a><i class="bi bi-linkedin"></i>Linked-IN<span class="tooltiptext">Click To Open LinkedIN</span></li>
             </ul>
         </div>
     </footer>

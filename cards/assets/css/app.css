@@ -15,6 +15,9 @@
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.dark{
+    --txt-b: #ffffff;
+}
 header, footer{
     position: absolute;
     background: rgba(46, 46, 46, 0.15);
@@ -62,6 +65,22 @@ h2{
 ul{
     padding: 0;
     margin: 0;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: var(--txt-w);
+}
+a:visited {
+    color: var(--txt-w);
+}
+a:hover {
+    color: var(--txt-w);
+    text-decoration: underline;
+}
+a:active {
+    color: var(--txt-w);
 }
 .row, .header-row{
     display: flex;
@@ -118,13 +137,27 @@ ul{
     justify-content: center;
     align-items: center;
 }
+.contrast-100{
+    background: rgba(46, 46, 46, 0);
+}
+.contrast-75{
+    background: rgba(46, 46, 46, 0.25);
+}
+.contrast-50{
+    background: rgba(46, 46, 46, 0.50);
+}
+.contrast-25{
+    background: rgba(46, 46, 46, 0.75);
+}
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .card:nth-child(1){
+    z-index: -1;
     background-image: url("../../assets/webp/1.webp");
+        /* filter: brightness(0.75) */
 }
 .card:nth-child(2){
     background-image: url("../../assets/webp/2.webp");
@@ -184,4 +217,23 @@ ul{
 .square{
     padding: 50px;
     width: 50%;
+}
+
+/* ToolTip */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: fit-content;
+    background: rgba(46, 46, 46, 0.55);
+    box-sizing: border-box;
+    box-shadow: 0 0s 25px rgba(0,0,0,.6);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0 15px;
+    position: absolute;
+    margin-left: 10px;    
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
