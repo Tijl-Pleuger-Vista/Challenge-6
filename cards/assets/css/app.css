@@ -237,3 +237,34 @@ a:active {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+.pfp{
+    height: 70px;
+    width: 70px;
+}
+
+/* skill */
+.skill{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+}
+.outer{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,.15),
+                -6px -6px 10px -1px rgba(255,255,255,.7);
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+.inner{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    box-shadow: inset 6px 6px 10px -1px rgba(0,0,0,.2),
+                inset -6px -6px 10px -1px rgba(255,255,255,.7);
+}
