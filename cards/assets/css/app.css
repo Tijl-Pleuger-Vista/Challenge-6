@@ -118,6 +118,11 @@ ul{
     justify-content: center;
     align-items: center;
 }
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card:nth-child(1){
     background-image: url("../../assets/webp/1.webp");
 }
@@ -175,4 +180,8 @@ ul{
 }
 #theme{
     text-decoration: none;
+}
+.square{
+    padding: 50px;
+    width: 50%;
 }
