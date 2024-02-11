@@ -3,9 +3,17 @@
     font-family: Dimitra;
     src: url(https://headbodyscript.github.io/assets/fonts/dimitra.woff2) format('woff2')
 }
+
+/* ROOT ELEMENTS */
 :root{
     --txt-w: #ffffff;
     --txt-b: #000000;
+}
+.dark{
+    --txt-b: #ffffff;
+}
+.light{
+    color: var(--txt-w);
 }
 *{
     margin: 0;
@@ -15,9 +23,7 @@
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.dark{
-    --txt-b: #ffffff;
-}
+
 header, footer{
     position: absolute;
     background: rgba(46, 46, 46, 0.15);
@@ -30,13 +36,6 @@ header, footer{
     justify-content: center;
     align-items: center;
     z-index: 3;
-}
-header div img{
-    height: 48px;
-    width: 48px;
-    position: relative;
-    top: 4px;
-    right: 10px;
 }
 header div ul li {
     list-style: none;
@@ -66,6 +65,8 @@ ul{
     padding: 0;
     margin: 0;
 }
+
+/* LINKS */
 a {
     text-decoration: none;
 }
@@ -82,7 +83,9 @@ a:hover {
 a:active {
     color: var(--txt-w);
 }
-.row, .header-row{
+
+/* FLEX BOX */
+.row{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -92,51 +95,30 @@ a:active {
     flex-wrap: wrap;
     flex-direction: column;
 }
-.white{
-    color: var(--txt-w);
-}
-.logo-text{
-    font-size: medium;
-    font-family: Dimitra;
-    position: relative;
-    top: 12px;
-}
-.download-button{
-    border-radius: 40px;
-    padding: 20px 90px 20px 90px;
-    background: rgba(46, 46, 46, 0.15);
-    box-sizing: border-box;
-    box-shadow: 0 0s 25px rgba(0,0,0,.6);
-}
-
-.download-button:hover{
-    background: rgba(46, 46, 46, 0.45);
-}
-.download-text{
-    margin-top: 75px;
-}
-.download-text:hover{
-    text-decoration: none;
-}
-.card{
-    height: 100dvh;
-    color: var(--txt-b);
-    position: sticky;
-    top: 0;
-    background-size: 100% 100%;
-    z-index: 1;
-}
-.card-content{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+.center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* IMG */
+svg{
+    position: absolute;
+    top: 0;
+}
+.logo{
+    height: 48px;
+    width: 48px;
+    position: relative;
+    top: 4px;
+    right: 10px;
+}
+.pfp{
+    height: 70px;
+    width: 70px;
+}
+
+/* THEME */
 .contrast-100{
     background: rgba(46, 46, 46, 0);
 }
@@ -149,15 +131,18 @@ a:active {
 .contrast-25{
     background: rgba(46, 46, 46, 0.75);
 }
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* CARDS */
+.card{
+    height: 100dvh;
+    color: var(--txt-b);
+    position: sticky;
+    top: 0;
+    background-size: 100% 100%;
+    z-index: 1;
 }
 .card:nth-child(1){
-    z-index: -1;
     background-image: url("../../assets/webp/1.webp");
-        /* filter: brightness(0.75) */
 }
 .card:nth-child(2){
     background-image: url("../../assets/webp/2.webp");
@@ -167,8 +152,38 @@ a:active {
 }
 .card:nth-child(4){
     background-image: url("../../assets/webp/4.webp");
-    /* filter: brightness(0.8) */
 }
+.card-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-display{
+    min-height: 200px;
+    background: rgba(46, 46, 46, 0.15);
+    box-sizing: border-box;
+    box-shadow: 0 0s 25px rgba(0,0,0,.6);
+    color: var(--txt-b);
+}
+
+/* SPACER */
+.space{
+    padding: 0 10px 0 10px;
+}
+.space-around{
+    justify-content: space-around;
+}
+.space-between{  
+    justify-content: space-between;
+}
+
+/* ICONS */
 .bi-moon-stars{
     width: 28px;
     height: 28px;
@@ -197,26 +212,16 @@ a:active {
     bottom: 2px;
     margin-right: 2px;
 }
+.bi-box-arrow-in-right,
+.bi-download{
+    position: relative;
+    bottom: 4px;
+    right: 5px;
+}
 .bi-envelope-fill{
     position: relative;
     bottom: 1px;
     margin-right: 2px;  
-}
-.space{
-    padding: 0 10px 0 10px;
-}
-.space-around{
-    justify-content: space-around;
-}
-.space-between{  
-    justify-content: space-between;
-}
-#theme{
-    text-decoration: none;
-}
-.square{
-    padding: 50px;
-    width: 50%;
 }
 
 /* ToolTip */
@@ -238,16 +243,10 @@ a:active {
     visibility: visible;
 }
 
-.pfp{
-    height: 70px;
-    width: 70px;
-}
-
-/* skill */
+/* SKILL */
 .skill{
-    position: absolute;
-    top: 10px;
-    right: 10px;
+
+    margin-left: 30px;
     width: 80px;
     height: 80px;
 }
@@ -257,14 +256,100 @@ a:active {
     border-radius: 50%;
     box-shadow: 6px 6px 10px -1px rgba(0,0,0,.15),
                 -6px -6px 10px -1px rgba(255,255,255,.7);
-    /* border: 1px solid red; */
     padding: 10px;
 }
 .inner{
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: inset 6px 6px 10px -1px rgba(0,0,0,.2),
-                inset -6px -6px 10px -1px rgba(255,255,255,.7);
+                inset -6px -6px 10px -1px rgba(255,255,255,.7),
+                /* -0.5px -0.5px 0px rgba(255,255,255,1), */
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+#experience{
+   font-weight: 600;
+   font-size: large;
+   color: var(--txt-b);
+}
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 10px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+
+}
+@keyframes anim{
+    100%{
+        stroke-dashoffset: var(--experience);
+        /* stroke-dashoffset: 400; */
+    }
+}
+
+/* BUTTON */
+.download-button{
+    border-radius: 40px;
+    padding: 20px 90px 20px 90px;
+    background: rgba(46, 46, 46, 0.15);
+    box-sizing: border-box;
+    box-shadow: 0 0s 25px rgba(0,0,0,.6);
+}
+.download-button:hover{
+    background: rgba(46, 46, 46, 0.45);
+}
+.download-text{
+    margin: 0 15px;
+}
+.download-text:hover{
+    text-decoration: none;
+}
+.btn-size{
+    width: 35%;
+}
+
+/* OTHER */
+.logo-text{
+    font-size: medium;
+    font-family: Dimitra;
+    position: relative;
+    top: 12px;
+}
+.square{
+    padding: 50px;
+    width: 50%;
+}
+#theme{
+    text-decoration: none;
+}
+.temp{
+    width: 400px;
+    height: 400px;
+}
+.desc p{
+    font-size: large;
+}
+
+
+
+
+
+
+/* Special */
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mt-75{
+    margin-top: 75px;
+}
+.w{
+    width: 100%;
 }
