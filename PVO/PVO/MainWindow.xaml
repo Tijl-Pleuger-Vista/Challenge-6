@@ -17,6 +17,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
+            <!--CHAT-->
+            <Grid Grid.Column="1" Grid.Row="1" x:Name="Chat">
             <Rectangle Grid.Column="1" MaxWidth="300"  MinWidth="300" Margin="1014,38,20,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
                 <Rectangle.Effect>
                     <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
@@ -32,6 +34,12 @@
                     </Style>
                 </TextBox.Resources>
             </TextBox>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
+                <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="Ask Me Anything!, I am Happy to Help With Your Questions!" Foreground="White" />
+            </ScrollViewer>
+            </Grid>
+            <!--CHAT-->
+            
             <Rectangle x:Name="MainWindowView" Grid.Column="1"   MinWidth="300" Margin="158,38,366,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
                 <Rectangle.Effect>
                     <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25"/>
@@ -40,7 +48,10 @@
                     <SolidColorBrush Color="#161616" />
                 </Rectangle.Fill>
             </Rectangle>
-            <Rectangle Grid.Column="1" Panel.ZIndex="-1" Margin="20,70,1232,98" Grid.Row="1" RadiusX="56" RadiusY="56" Fill="#161616">
+            
+            <!--SIDE BAR-->
+            <Grid x:Name="Sidebar" Grid.Row="1" Grid.Column="1">
+                <Rectangle Grid.Column="1" Panel.ZIndex="-1" Margin="22,69,1230,99" Grid.Row="1" RadiusX="56" RadiusY="56" Fill="#161616">
                 <Rectangle.Effect>
                     <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
                 </Rectangle.Effect>
@@ -95,10 +106,12 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
+        </Grid>
+        <!--SIDE BAR-->
 
-            <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
+            <!--<ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
                 <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="Ask Me Anything!, I am Happy to Help With Your Questions!" Foreground="White" />
-            </ScrollViewer>
+            </ScrollViewer>-->
 
             <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Margin="181,70,397,85" Grid.RowSpan="2" Grid.Column="1" MaxHeight="580" MaxWidth="757" >
 
@@ -127,13 +140,83 @@
                 </Span>
                 </TextBlock>
 
-
-
-                
-
             </ScrollViewer>
+            <!--login-->
+            <Grid Grid.Column="5" x:Name="login" Grid.Row="1" Visibility="Visible">
+                <Rectangle x:Name="MainWindowViewLogin"  Grid.Column="5" MinWidth="300" Margin="158,38,366,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25"/>
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="#161616" />
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBox x:Name="UserInputLoginUser" Grid.Column="5" Margin="378,390,586,334" FontSize="14" TextWrapping="Wrap" Text="" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBox x:Name="UserInputLoginPassword" KeyDown="OnKeyDown" Grid.Column="5" Margin="376,448,586,276" FontSize="14" TextWrapping="Wrap" Text="" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Button Style="{DynamicResource lvl1btn}" x:Name="loginBtn" Content="Login" Margin="512,555,720,168" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="CreateAcc"/>
+                <Button Style="{DynamicResource lvl1btn}" x:Name="CreateBtn" Content="Create a Leet account" Margin="266,555,926,170" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="CreateAcc"/>
+                <Button Style="{DynamicResource lvl1btn}" x:Name="Offilinebtn" Content="Offline" Margin="705,555,487,169" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="OfflineWarning"/>
 
-            <Button Style="{DynamicResource lvl1btn}" x:Name="Level1" Content="Level 1" Grid.Column="1" Margin="1120,170,126,529" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Visible"/>  
+                <Image x:Name="LoginLogo" Margin="353,120,566,438" Grid.Row="1" Grid.Column="5" MaxHeight="200" MaxWidth="200" Width="200" Height="200" />
+
+               
+
+
+            </Grid>
+            <!--login-->
+
+            <!--offline warning-->
+            <Grid Grid.Column="5" x:Name="OfflineWarningGrid" Grid.Row="1" Visibility="Hidden">
+                <Rectangle x:Name="OfflineWarningBox" MinWidth="300" Margin="266,112,465,430" RadiusX="70.674" RadiusY="70.674">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25"/>
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="#161616" />
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Button Style="{DynamicResource lvl1btn}" x:Name="OffilineOKbtn" Content="Ok" Margin="490,268,702,456" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="UserLogin"/>
+                <TextBlock HorizontalAlignment="Left" Margin="389,198,0,0" TextWrapping="Wrap" Text="User data will not be saved" VerticalAlignment="Top" Foreground="white" FontSize="30"/>
+                <TextBlock HorizontalAlignment="Left" Margin="507,130,0,0" TextWrapping="Wrap" Text="Warning!!!" VerticalAlignment="Top" Foreground="Yellow" FontSize="30"/>
+            </Grid>
+            <!--offline warning-->
+
+            <!--level buttons-->
+            <Button Style="{DynamicResource lvl1btn}" x:Name="Level1" x:Uid="lvlbtn" Content="Level 1" Grid.Column="1" Margin="1120,170,126,529" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Hidden" Click="Level1_Click"/>
+            <Button Style="{DynamicResource lvl1btn}" x:Name="Level2" x:Uid="lvlbtn" Content="Level 2" Grid.Column="1" Margin="1120,284,126,415" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Hidden" Click="Level2_Click"/>
+            <Button Style="{DynamicResource lvl1btn}" x:Name="Level3" x:Uid="lvlbtn" Content="Level 3" Grid.Column="1" Margin="1120,402,126,297" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Hidden" Click="Level3_Click"/>
+
+            <Button x:Name="UserIcon" Grid.Column="1" Margin="35,673,1240,21" Grid.Row="1" Click="UserLogin">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Stroke="Transparent"  
+                       StrokeThickness="0">
+                                <Ellipse.Fill>
+                                    <ImageBrush x:Name="UserIcon" Stretch="Uniform" ImageSource="https://www.kindpng.com/picc/m/442-4426528_round-picture-profile-blond-hd-png-download.png"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <ContentPresenter HorizontalAlignment="Center"  
+                                VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+
+
 
 
 
