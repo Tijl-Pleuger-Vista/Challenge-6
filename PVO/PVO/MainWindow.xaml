@@ -19,27 +19,27 @@
 
             <!--CHAT-->
             <Grid Grid.Column="1" Grid.Row="1" x:Name="Chat">
-            <Rectangle Grid.Column="1" MaxWidth="300"  MinWidth="300" Margin="1014,38,20,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
-                <Rectangle.Effect>
-                    <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
-                </Rectangle.Effect>
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="#161616" />
-                </Rectangle.Fill>
-            </Rectangle>
-            <TextBox x:Name="UserInput" KeyDown="OnKeyDown" Grid.Column="1" Margin="1045,557,52,103" TextWrapping="Wrap" Text="" MinWidth="230" MaxHeight="70" MaxWidth="230" MinHeight="60" Grid.Row="1" Padding="10,10,10,10">
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20" />
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
-                <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="Ask Me Anything!, I am Happy to Help With Your Questions!" Foreground="White" />
-            </ScrollViewer>
+                <Rectangle Grid.Column="1" MaxWidth="300"  MinWidth="300" Margin="1014,38,20,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="#161616" />
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBox x:Name="UserInput" KeyDown="OnKeyDown" Grid.Column="1" Margin="1045,557,52,103" TextWrapping="Wrap" Text="" MinWidth="230" MaxHeight="70" MaxWidth="230" MinHeight="60" Grid.Row="1" Padding="10,10,10,10">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20" />
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
+                    <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="Ask Me Anything!, I am Happy to Help With Your Questions!" Foreground="White" />
+                </ScrollViewer>
             </Grid>
             <!--CHAT-->
-            
+
             <Rectangle x:Name="MainWindowView" Grid.Column="1"   MinWidth="300" Margin="158,38,366,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
                 <Rectangle.Effect>
                     <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25"/>
@@ -48,66 +48,68 @@
                     <SolidColorBrush Color="#161616" />
                 </Rectangle.Fill>
             </Rectangle>
-            
+
             <!--SIDE BAR-->
             <Grid x:Name="Sidebar" Grid.Row="1" Grid.Column="1">
                 <Rectangle Grid.Column="1" Panel.ZIndex="-1" Margin="22,69,1230,99" Grid.Row="1" RadiusX="56" RadiusY="56" Fill="#161616">
-                <Rectangle.Effect>
-                    <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
-                </Rectangle.Effect>
-            </Rectangle>
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
+                    </Rectangle.Effect>
+                </Rectangle>
 
-            <!--FIRST MENU ICON-->
-            <Menu Grid.Column="1" Margin="33,108,1239,567" Grid.Row="1" Background="Transparent">
-                <MenuItem Width="74">
-                    <MenuItem.Header>
-                        <Image x:Name="FirstIcon" Width="59" Height="60" RenderTransformOrigin="0.5,0.508"  />
-                    </MenuItem.Header>
-                    <MenuItem Click="Internet" Header="About the internet">
-                    </MenuItem>
-                </MenuItem>
-            </Menu>
-
-            <!--SECOND MENU ICON-->
-            <Menu Grid.Column="1" Margin="33,253,1239,422" Grid.Row="1" Background="Transparent">
-                <MenuItem Width="74">
-                    <MenuItem.Header>
-                        <Image  x:Name="SecondIcon" Width="59" Height="60"  />
-                    </MenuItem.Header>
-                    <MenuItem Click="Security" Header="About your security">
-                    </MenuItem>
-                </MenuItem>
-            </Menu>
-
-            <!--THIRD MENU ICON-->
-            <Menu Grid.Column="1" Margin="33,390,1239,285" Grid.Row="1" Background="Transparent">
-                <MenuItem Width="74">
-                    <MenuItem.Header>
-                        <Image x:Name="ThirdIcon" Width="59" Height="60"  />
-                    </MenuItem.Header>
-                    <MenuItem Header="Open">
-                        <MenuItem Header="Open2">
-                            <MenuItem Header="Open3"/>
+                <!--FIRST MENU ICON-->
+                <Menu Grid.Column="1" Margin="33,108,1239,567" Grid.Row="1" Background="Transparent">
+                    <MenuItem Width="74">
+                        <MenuItem.Header>
+                            <Image x:Name="FirstIcon" Width="59" Height="60" RenderTransformOrigin="0.5,0.508"  />
+                        </MenuItem.Header>
+                        <MenuItem Click="Internet" Header="SQLInjection">
+                        </MenuItem>
+                        <MenuItem Click="Internet" Header="Data Base">
                         </MenuItem>
                     </MenuItem>
-                </MenuItem>
-            </Menu>
+                </Menu>
 
-            <!--FOURTH MENU ICON-->
-            <Menu Grid.Column="1" Margin="33,534,1239,141" Grid.Row="1" Background="Transparent">
-                <MenuItem Width="74">
-                    <MenuItem.Header>
-                        <Image x:Name="FourthIcon" Width="59" Height="60"  />
-                    </MenuItem.Header>
-                    <MenuItem Header="Open">
-                        <MenuItem Header="Open2">
-                            <MenuItem Header="Open3"/>
+                <!--SECOND MENU ICON-->
+                <Menu Grid.Column="1" Margin="33,253,1239,422" Grid.Row="1" Background="Transparent">
+                    <MenuItem Width="74">
+                        <MenuItem.Header>
+                            <Image  x:Name="SecondIcon" Width="59" Height="60"  />
+                        </MenuItem.Header>
+                        <MenuItem Click="Security" Header="About your security">
                         </MenuItem>
                     </MenuItem>
-                </MenuItem>
-            </Menu>
-        </Grid>
-        <!--SIDE BAR-->
+                </Menu>
+
+                <!--THIRD MENU ICON-->
+                <Menu Grid.Column="1" Margin="33,390,1239,285" Grid.Row="1" Background="Transparent">
+                    <MenuItem Width="74">
+                        <MenuItem.Header>
+                            <Image x:Name="ThirdIcon" Width="59" Height="60"  />
+                        </MenuItem.Header>
+                        <MenuItem Header="Open">
+                            <MenuItem Header="Open2">
+                                <MenuItem Header="Open3"/>
+                            </MenuItem>
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+
+                <!--FOURTH MENU ICON-->
+                <Menu Grid.Column="1" Margin="33,534,1239,141" Grid.Row="1" Background="Transparent">
+                    <MenuItem Width="74">
+                        <MenuItem.Header>
+                            <Image x:Name="FourthIcon" Width="59" Height="60"  />
+                        </MenuItem.Header>
+                        <MenuItem Header="Open">
+                            <MenuItem Header="Open2">
+                                <MenuItem Header="Open3"/>
+                            </MenuItem>
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+            </Grid>
+            <!--SIDE BAR-->
 
             <!--<ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
                 <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="Ask Me Anything!, I am Happy to Help With Your Questions!" Foreground="White" />
@@ -158,20 +160,23 @@
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox x:Name="UserInputLoginPassword" KeyDown="OnKeyDown" Grid.Column="5" Margin="376,448,586,276" FontSize="14" TextWrapping="Wrap" Text="" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494">
+                <!--<TextBox x:Name="UserInputLoginPassword" KeyDown="OnKeyDown" Grid.Column="5" Margin="376,448,586,276" FontSize="14" TextWrapping="Wrap" Text="" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10" />
                         </Style>
                     </TextBox.Resources>
-                </TextBox>
+                </TextBox>-->
+                <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" x:Name="UserInputLoginPassword" KeyDown="OnKeyDown" Grid.Column="5" Margin="376,448,586,276" FontSize="14" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494"/>
+
+
                 <Button Style="{DynamicResource lvl1btn}" x:Name="loginBtn" Content="Login" Margin="512,555,720,168" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="CreateAcc"/>
                 <Button Style="{DynamicResource lvl1btn}" x:Name="CreateBtn" Content="Create a Leet account" Margin="266,555,926,170" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="CreateAcc"/>
                 <Button Style="{DynamicResource lvl1btn}" x:Name="Offilinebtn" Content="Offline" Margin="705,555,487,169" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="OfflineWarning"/>
 
                 <Image x:Name="LoginLogo" Margin="353,120,566,438" Grid.Row="1" Grid.Column="5" MaxHeight="200" MaxWidth="200" Width="200" Height="200" />
 
-               
+
 
 
             </Grid>

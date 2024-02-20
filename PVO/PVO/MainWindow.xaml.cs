@@ -26,16 +26,19 @@ using System.Reflection;
 using static PVO.MainWindow;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
+using System.Windows.Controls.Primitives;
+using System.Diagnostics.Metrics;
 
 namespace PVO
 {
-
     public partial class MainWindow : Window
     {
         string imgs = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
         string solutionDir = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
         int? Arraylength = 0;
-        
+        string? clickedsubject;
+
+    
 
 
 
@@ -86,6 +89,8 @@ namespace PVO
 
         public void Internet(object sender, RoutedEventArgs e)
         {
+            var trying = e.Source.ToString;
+            clickedsubject = ((System.Windows.Controls.HeaderedItemsControl)trying.Target).Header.ToString();
 
             ClearMainText();
             LevelCount();
@@ -223,10 +228,15 @@ namespace PVO
             this.ResourcesTitle.Text = null;
         }
 
+
+
         private void Level1_Click(object sender, RoutedEventArgs e)
         {
+
             //read the json
-            string text = File.ReadAllText(solutionDir + "\\Json\\SQLinjection.json");
+            
+            string text = File.ReadAllText(solutionDir + "\\Json\\" + clickedsubject + ".json");
+           
 
             //deserialise(make it into string for the person class variables)
             var InfoArray = JsonSerializer.Deserialize<Subjects>(text)!;
@@ -342,7 +352,7 @@ namespace PVO
 
         public void LevelCount()
         {
-            string text = File.ReadAllText(solutionDir + "\\Json\\SQLinjection.json");
+            string text = File.ReadAllText(solutionDir + "\\Json\\SQLInjection.json");
             var InfoArray = JsonSerializer.Deserialize<Subjects>(text)!;
             Arraylength = InfoArray.Subject!.Length;
 
@@ -405,8 +415,7 @@ namespace PVO
         }
 
 
+
     }
-
-
 
 }
