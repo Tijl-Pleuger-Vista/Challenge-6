@@ -63,7 +63,7 @@
                         <MenuItem.Header>
                             <Image x:Name="FirstIcon" Width="59" Height="60" RenderTransformOrigin="0.5,0.508"  />
                         </MenuItem.Header>
-                        <MenuItem Click="Internet" Header="SQLInjection">
+                        <MenuItem Click="Internet" Header="SQL Injection">
                         </MenuItem>
                         <MenuItem Click="Internet" Header="Data Base">
                         </MenuItem>
@@ -203,14 +203,14 @@
             <Button Style="{DynamicResource lvl1btn}" x:Name="Level2" x:Uid="lvlbtn" Content="Level 2" Grid.Column="1" Margin="1120,284,126,415" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Hidden" Click="Level2_Click"/>
             <Button Style="{DynamicResource lvl1btn}" x:Name="Level3" x:Uid="lvlbtn" Content="Level 3" Grid.Column="1" Margin="1120,402,126,297" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Hidden" Click="Level3_Click"/>
 
-            <Button x:Name="UserIcon" Grid.Column="1" Margin="35,673,1240,21" Grid.Row="1" Click="UserLogin">
+            
+            <Button x:Name="UserIcon" Grid.Column="1" Margin="35,675,1240,19" Grid.Row="1" Click="UserLogin">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>
-                            <Ellipse Stroke="Transparent"  
-                       StrokeThickness="0">
+                            <Ellipse Stroke="Transparent" StrokeThickness="0">
                                 <Ellipse.Fill>
-                                    <ImageBrush x:Name="UserIcon" Stretch="Uniform" ImageSource="https://www.kindpng.com/picc/m/442-4426528_round-picture-profile-blond-hd-png-download.png"/>
+                                    <ImageBrush Stretch="Uniform" ImageSource="{Binding ElementName=UserIMG, Path=Source}"/>
                                 </Ellipse.Fill>
                             </Ellipse>
                             <ContentPresenter HorizontalAlignment="Center"  
@@ -220,6 +220,7 @@
                 </Button.Template>
             </Button>
 
+            <Image x:Name="UserIMG" Visibility="Hidden"  Margin="353,120,566,438" Grid.Row="1" Grid.Column="5" MaxHeight="0" MaxWidth="0" Width="0" Height="0"/>
 
 
 

@@ -28,6 +28,8 @@ using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Windows.Controls.Primitives;
 using System.Diagnostics.Metrics;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace PVO
 {
@@ -37,12 +39,7 @@ namespace PVO
         string solutionDir = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
         int? Arraylength = 0;
         string? clickedsubject;
-
-    
-
-
-
-
+        public string Usericon = "https://beyond-medtech.com/wp-content/uploads/2019/08/Vista-Thumbnail.png";
 
         //On App load
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -52,6 +49,7 @@ namespace PVO
             ThirdIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-local-network-64.png"));
             FourthIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-security-configuration-48.png"));
             LoginLogo.Source = new BitmapImage(new Uri("C:\\Users\\jeera\\Documents\\GitHub\\project-6\\app\\assets\\content\\logo\\init\\original.png"));
+            UserIMG.Source = new BitmapImage(new Uri("https://beyond-medtech.com/wp-content/uploads/2019/08/Vista-Thumbnail.png"));
             this.Sidebar.Visibility = Visibility.Hidden;
             this.UserIcon.Visibility = Visibility.Hidden;
             this.Chat.Visibility = Visibility.Hidden;
@@ -63,7 +61,11 @@ namespace PVO
 
 
 
+
+
+
         }
+
 
         /*Json names (firstlayer)*/
         public class Subjects
@@ -87,12 +89,24 @@ namespace PVO
 
         }
 
+
         public void Internet(object sender, RoutedEventArgs e)
         {
-            var trying = e.Source.ToString;
-            clickedsubject = ((System.Windows.Controls.HeaderedItemsControl)trying.Target).Header.ToString();
+            //var trying = e.Source.ToString;
+            //clickedsubject = ((System.Windows.Controls.HeaderedItemsControl)trying.Target).Header.ToString();
 
-            ClearMainText();
+            var src = e.Source.ToString;
+
+            if (((System.Windows.Controls.HeaderedItemsControl)src.Target).Header.ToString() == "SQL Injection")
+            {
+                clickedsubject = "SQLInjection";
+            } 
+            else if (((System.Windows.Controls.HeaderedItemsControl)src.Target).Header.ToString() == "Data Base")
+            {
+                clickedsubject = "DataBase";
+            }
+
+                ClearMainText();
             LevelCount();
 
             if(Arraylength == 1) {
@@ -192,7 +206,7 @@ namespace PVO
                 string user_input = UserInput.Text;
 
                 //authApi
-                var authentication = new APIAuthentication("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");
+                var authentication = new APIAuthentication("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");
                 var api = new OpenAIAPI(authentication);
 
                 // Start a new chat
@@ -227,8 +241,6 @@ namespace PVO
             this.ExamplesTitle.Text = null;
             this.ResourcesTitle.Text = null;
         }
-
-
 
         private void Level1_Click(object sender, RoutedEventArgs e)
         {
