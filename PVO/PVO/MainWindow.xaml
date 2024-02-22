@@ -170,7 +170,7 @@
                 <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" x:Name="UserInputLoginPassword" KeyDown="OnKeyDown" Grid.Column="5" Margin="376,448,586,276" FontSize="14" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494"/>
 
 
-                <Button Style="{DynamicResource lvl1btn}" x:Name="loginBtn" Content="Login" Margin="512,555,720,168" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="CreateAcc"/>
+                <Button Style="{DynamicResource lvl1btn}" x:Name="loginBtn" Content="Login" Margin="512,555,720,168" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="loginbtn"/>
                 <Button Style="{DynamicResource lvl1btn}" x:Name="CreateBtn" Content="Create a Leet account" Margin="266,555,926,170" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="CreateAcc"/>
                 <Button Style="{DynamicResource lvl1btn}" x:Name="Offilinebtn" Content="Offline" Margin="705,555,487,169" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="OfflineWarning"/>
 
