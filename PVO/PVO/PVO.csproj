@@ -9,9 +9,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\1.webp" />
+    <None Remove="img\favicon.ico" />
+    <None Remove="img\icons8-local-network-64.png" />
+    <None Remove="img\icons8-security-configuration-48.png" />
+    <None Remove="img\icons8-web-shield-48.png" />
+    <None Remove="img\World.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Cloud.Firestore" Version="3.5.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="OpenAI" Version="1.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\1.webp" />
+    <Resource Include="img\favicon.ico" />
+    <Resource Include="img\icons8-local-network-64.png" />
+    <Resource Include="img\icons8-security-configuration-48.png" />
+    <Resource Include="img\icons8-web-shield-48.png" />
+    <Resource Include="img\World.png" />
   </ItemGroup>
 
 </Project>

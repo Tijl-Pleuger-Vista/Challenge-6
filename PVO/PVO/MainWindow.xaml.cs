@@ -48,17 +48,17 @@ namespace PVO
          internal static class Firestorehelper
         {
             static string fireconfig = @"{
-""type"": ""service_account"",
-  ""project_id"": ""vista-400927"",
-  ""private_key_id"": ""156fbe61e8767f37306f2bdb67163cb1c3c171f1"",
-  ""private_key"": ""-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9x8ZwyY84khvO\nAnjur8CrYBr8zESK9Hhq/z2hNX6eHZD8xYeLZxOixX41f0uXrWjJ8Pk9Uw/3BaLr\nA7XKK1tACRAIQuypFn4QfGIeqm89c1mcDvZt1Ug1syJ3rNy3+HfN7Qprqn+n+m69\n3IeIxP3mu0ntmdWU8Iu8tdDUJEnS4YPCzgKRs2ZwjSaS3pbQGGFdwt26DT9MuKrN\njTgIYbAqYvZ2EoaZ/c+KVNlNo7JDVoecVc2w1pXk5L8bu5xLiXHUIN8RFwFXVM+i\nC3IGCRl22x8iZ56MBO33fA6S0MiM8S2Ei0VMl3QMejA/RObqzpUXbZntzjx/5rCK\nUatg6U1hAgMBAAECggEAHKCsIItnHWN86kCZOXgtmixvJb8yf7uNBqbmBxFovjU7\nj8XEQpUT8zPTbAJ9xq2T5xKApm2HNP4Wq1jt7UdJBonXb0eZJ5CLB7Wbn4CaMyzZ\nUZ84MS1BLUiOZHsg+Gd0uw2Mytz3UMGIPv+rOkhs/Ic4Ca1w+Hyot5i9naKzuCml\neavszaFNX53rHYUwP4PKOFwiXl5TD6VMigxoLzDR4l6ga6v1gZOCTGP7tC/hZk2X\n98vduGJcrj82SGvSalt9WLzHw9GrC+1DFa7yrc2go0x8aQNJzlFq5zKI85/JqekM\nq4f1JF+P8abAaNiQzp/c7NkGVyC9IP73HM3jPUV+eQKBgQD8P/Ygvr9Yd+rWyOa4\n8IFqFTj11fLNYDsBlYz0j3T6o0TIsLQ+kRDZ2wTSlC7c9dw+w0Dt4q0osharO3Jf\ncSKGCKIQn323mu4FruZp09KL/eLBMk7DCRqVLSW9HZRMJhZloxQRzeTXXpNcR3XZ\nnAoCntS5K1Sctw+fBbcu8AztdwKBgQDAmg+Yp9xpg0uYdyXCTXzsF74x/XZwhrag\nLB3UcbMkYVl1VmxjwTiuN3ZZRiFBEuCDBj9AVg7HWYwH+UxSzsBsLW1+04yTtADk\nFFdqKgWz7ce+R/ECaorQToVXDBUkx7xqpJh8JfZlwAKjS6HZEndqhbOSMI22UfqK\nw+rP2F7x5wKBgH7zVdS/Cx/kIj18mJmk+QzBp4wZ4/u2nZu7f1gpxs7JUrnKLLx8\nV8W8s52jVD6CQhkYPVo7xbgAgOYmofYkwyI/wAirrCK2h2o2zuGd6I3p9bATuI3x\ny/4d3ati8pqsZIM8YsJfI/e8Ml+z2zzsiiEtfJPAmfHRM7xtrPaje24bAoGAKhD8\nGxF+uKTum+xaGOgnwsEkz3JWrhkeRjmcgkwbHnUMvu4TWm5XXOXMOY9xr+7ZjoSM\nyBaDv9K1HQC8RNHXgUkiwzKdX51PHIG83fkzqarjl5HK+AYhL4IW6X5AF/pwErLE\ng0kfWfXoHZZlUS4RWvi80c89BHc/S5Oi86aEhj0CgYEAlmittIQ7diQ0BeUEWm8I\nFJjuMLT7vK/BXGW9PNNEFAyulXB+Io/F2hbncbHajE71eLVWbWxq1RfsdJOqFaqN\nvdQFrVzpMLUreETVqzLZ5PN7uBcCCwb4Xfi0IaLJBJ14Iw8xrnG6aHCRB7C3SJ5s\nCABT6qp+qWXUo1txy2YOw9Y=\n-----END PRIVATE KEY-----\n"",
-  ""client_email"": ""firebase-adminsdk-wsylq@vista-400927.iam.gserviceaccount.com"",
-  ""client_id"": ""105360489942787503600"",
-  ""auth_uri"": ""https://accounts.google.com/o/oauth2/auth"",
-  ""token_uri"": ""https://oauth2.googleapis.com/token"",
-  ""auth_provider_x509_cert_url"": ""https://www.googleapis.com/oauth2/v1/certs"",
-  ""client_x509_cert_url"": ""https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-wsylq%40vista-400927.iam.gserviceaccount.com"",
-  ""universe_domain"": ""googleapis.com""
+            ""type"": ""service_account"",
+              ""project_id"": ""vista-400927"",
+              ""private_key_id"": ""156fbe61e8767f37306f2bdb67163cb1c3c171f1"",
+              ""private_key"": ""-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9x8ZwyY84khvO\nAnjur8CrYBr8zESK9Hhq/z2hNX6eHZD8xYeLZxOixX41f0uXrWjJ8Pk9Uw/3BaLr\nA7XKK1tACRAIQuypFn4QfGIeqm89c1mcDvZt1Ug1syJ3rNy3+HfN7Qprqn+n+m69\n3IeIxP3mu0ntmdWU8Iu8tdDUJEnS4YPCzgKRs2ZwjSaS3pbQGGFdwt26DT9MuKrN\njTgIYbAqYvZ2EoaZ/c+KVNlNo7JDVoecVc2w1pXk5L8bu5xLiXHUIN8RFwFXVM+i\nC3IGCRl22x8iZ56MBO33fA6S0MiM8S2Ei0VMl3QMejA/RObqzpUXbZntzjx/5rCK\nUatg6U1hAgMBAAECggEAHKCsIItnHWN86kCZOXgtmixvJb8yf7uNBqbmBxFovjU7\nj8XEQpUT8zPTbAJ9xq2T5xKApm2HNP4Wq1jt7UdJBonXb0eZJ5CLB7Wbn4CaMyzZ\nUZ84MS1BLUiOZHsg+Gd0uw2Mytz3UMGIPv+rOkhs/Ic4Ca1w+Hyot5i9naKzuCml\neavszaFNX53rHYUwP4PKOFwiXl5TD6VMigxoLzDR4l6ga6v1gZOCTGP7tC/hZk2X\n98vduGJcrj82SGvSalt9WLzHw9GrC+1DFa7yrc2go0x8aQNJzlFq5zKI85/JqekM\nq4f1JF+P8abAaNiQzp/c7NkGVyC9IP73HM3jPUV+eQKBgQD8P/Ygvr9Yd+rWyOa4\n8IFqFTj11fLNYDsBlYz0j3T6o0TIsLQ+kRDZ2wTSlC7c9dw+w0Dt4q0osharO3Jf\ncSKGCKIQn323mu4FruZp09KL/eLBMk7DCRqVLSW9HZRMJhZloxQRzeTXXpNcR3XZ\nnAoCntS5K1Sctw+fBbcu8AztdwKBgQDAmg+Yp9xpg0uYdyXCTXzsF74x/XZwhrag\nLB3UcbMkYVl1VmxjwTiuN3ZZRiFBEuCDBj9AVg7HWYwH+UxSzsBsLW1+04yTtADk\nFFdqKgWz7ce+R/ECaorQToVXDBUkx7xqpJh8JfZlwAKjS6HZEndqhbOSMI22UfqK\nw+rP2F7x5wKBgH7zVdS/Cx/kIj18mJmk+QzBp4wZ4/u2nZu7f1gpxs7JUrnKLLx8\nV8W8s52jVD6CQhkYPVo7xbgAgOYmofYkwyI/wAirrCK2h2o2zuGd6I3p9bATuI3x\ny/4d3ati8pqsZIM8YsJfI/e8Ml+z2zzsiiEtfJPAmfHRM7xtrPaje24bAoGAKhD8\nGxF+uKTum+xaGOgnwsEkz3JWrhkeRjmcgkwbHnUMvu4TWm5XXOXMOY9xr+7ZjoSM\nyBaDv9K1HQC8RNHXgUkiwzKdX51PHIG83fkzqarjl5HK+AYhL4IW6X5AF/pwErLE\ng0kfWfXoHZZlUS4RWvi80c89BHc/S5Oi86aEhj0CgYEAlmittIQ7diQ0BeUEWm8I\nFJjuMLT7vK/BXGW9PNNEFAyulXB+Io/F2hbncbHajE71eLVWbWxq1RfsdJOqFaqN\nvdQFrVzpMLUreETVqzLZ5PN7uBcCCwb4Xfi0IaLJBJ14Iw8xrnG6aHCRB7C3SJ5s\nCABT6qp+qWXUo1txy2YOw9Y=\n-----END PRIVATE KEY-----\n"",
+              ""client_email"": ""firebase-adminsdk-wsylq@vista-400927.iam.gserviceaccount.com"",
+              ""client_id"": ""105360489942787503600"",
+              ""auth_uri"": ""https://accounts.google.com/o/oauth2/auth"",
+              ""token_uri"": ""https://oauth2.googleapis.com/token"",
+              ""auth_provider_x509_cert_url"": ""https://www.googleapis.com/oauth2/v1/certs"",
+              ""client_x509_cert_url"": ""https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-wsylq%40vista-400927.iam.gserviceaccount.com"",
+              ""universe_domain"": ""googleapis.com""
             }";
 
             static string filepath = "";
@@ -92,16 +92,18 @@ namespace PVO
         //On App load
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            FirstIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\World.png"));
-            SecondIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-web-shield-48.png"));
-            ThirdIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-local-network-64.png"));
-            FourthIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-security-configuration-48.png"));
+            //FirstIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\World.png"));
+            //SecondIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-web-shield-48.png"));
+            //ThirdIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-local-network-64.png"));
+            //FourthIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-security-configuration-48.png"));
+
             LoginLogo.Source = new BitmapImage(new Uri("C:\\Users\\jeera\\Documents\\GitHub\\project-6\\app\\assets\\content\\logo\\init\\original.png"));
             UserIMG.Source = new BitmapImage(new Uri(imgs + "\\img\\profile-default.png"));
             this.Sidebar.Visibility = Visibility.Hidden;
             this.UserIcon.Visibility = Visibility.Hidden;
             this.Chat.Visibility = Visibility.Hidden;
             this.MainText.Visibility = Visibility.Hidden;
+                 //= new BitmapImage(new Uri(imgs + "\\img\\1.webp"));
             Firestorehelper.SetEnviromentVariable();
 
         }
