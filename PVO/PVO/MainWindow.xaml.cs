@@ -92,10 +92,6 @@ namespace PVO
         //On App load
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //FirstIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\World.png"));
-            //SecondIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-web-shield-48.png"));
-            //ThirdIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-local-network-64.png"));
-            //FourthIcon.Source = new BitmapImage(new Uri(imgs + "\\img\\icons8-security-configuration-48.png"));
 
             LoginLogo.Source = new BitmapImage(new Uri("C:\\Users\\jeera\\Documents\\GitHub\\project-6\\app\\assets\\content\\logo\\init\\original.png"));
             UserIMG.Source = new BitmapImage(new Uri(imgs + "\\img\\profile-default.png"));
@@ -103,14 +99,11 @@ namespace PVO
             this.UserIcon.Visibility = Visibility.Hidden;
             this.Chat.Visibility = Visibility.Hidden;
             this.MainText.Visibility = Visibility.Hidden;
-                 //= new BitmapImage(new Uri(imgs + "\\img\\1.webp"));
             Firestorehelper.SetEnviromentVariable();
 
         }
 
-
-
-
+        //Encrypted Password
         public static string Encrypt(string text)
         {
             var b = Encoding.UTF8.GetBytes(text);
@@ -118,6 +111,7 @@ namespace PVO
             return Convert.ToBase64String(encrypted);
         }
 
+        //Decrypt Password
         public static string Decrypt(string encrypted)
         {
             var b = Convert.FromBase64String(encrypted);
@@ -162,7 +156,6 @@ namespace PVO
             public string? resources { get; set; }
 
         }
-
 
         public void Internet(object sender, RoutedEventArgs e)
         {
@@ -561,8 +554,6 @@ namespace PVO
         private UserData GetWriteData()
         {
 
-
-
             string username = UserInputLoginUser.Text.Trim();
             string password = Encrypt(UserInputLoginPassword.Password);
 
@@ -614,7 +605,6 @@ namespace PVO
             }
 
         }
-
 
         private bool CheckIfUserExsist() {
 

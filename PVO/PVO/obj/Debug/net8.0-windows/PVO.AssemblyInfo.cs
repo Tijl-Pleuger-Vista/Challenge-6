@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PVO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e8fba9a626a6c6757836b67ae1a80f4933ddd19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e16a2e8694f9a058fa3bc9447f6347c7238791f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PVO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PVO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
