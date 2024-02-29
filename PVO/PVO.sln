@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PVO", "PVO\PVO.csproj", "{9
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LeenBook", "LeenBook\LeenBook.vdproj", "{83C7A8DB-12F2-4B16-BE9D-1B293168758C}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Leen Book", "Leen Book\Leen Book.vdproj", "{6C47D16A-0B7E-446E-9433-8C7B10AC8632}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,15 +21,13 @@ Global
 		{954B19A6-01A7-42FC-8636-5B6CBC4EEF5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83C7A8DB-12F2-4B16-BE9D-1B293168758C}.Debug|Any CPU.ActiveCfg = Debug
 		{83C7A8DB-12F2-4B16-BE9D-1B293168758C}.Release|Any CPU.ActiveCfg = Release
+		{6C47D16A-0B7E-446E-9433-8C7B10AC8632}.Debug|Any CPU.ActiveCfg = Debug
+		{6C47D16A-0B7E-446E-9433-8C7B10AC8632}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {41B40522-E6CB-4546-A11F-52239385B5A1}
-	EndGlobalSection
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 EndGlobal

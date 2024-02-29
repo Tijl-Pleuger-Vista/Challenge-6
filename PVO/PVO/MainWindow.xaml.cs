@@ -33,16 +33,18 @@ using System.Runtime.CompilerServices;
 using Google.Cloud.Firestore;
 using System.Security.Cryptography;
 using DocumentReference = Google.Cloud.Firestore.DocumentReference;
+using FireSharp.Config;
+using FireSharp.Interfaces;
 
 namespace PVO
 {
     public partial class MainWindow : Window
     {
         string imgs = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
-        string solutionDir = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
+        //string solutionDir = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
+        string solutionDir = System.IO.Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName);
         int? Arraylength = 0;
         string? clickedsubject;
-        public string Usericon = "https://beyond-medtech.com/wp-content/uploads/2019/08/Vista-Thumbnail.png";
 
         //database conn
          internal static class Firestorehelper
@@ -88,20 +90,17 @@ namespace PVO
             public int? XP { get; set; }
         }
 
-
         //On App load
         private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
+            {
 
-            LoginLogo.Source = new BitmapImage(new Uri("C:\\Users\\jeera\\Documents\\GitHub\\project-6\\app\\assets\\content\\logo\\init\\original.png"));
-            UserIMG.Source = new BitmapImage(new Uri(imgs + "\\img\\profile-default.png"));
-            this.Sidebar.Visibility = Visibility.Hidden;
-            this.UserIcon.Visibility = Visibility.Hidden;
-            this.Chat.Visibility = Visibility.Hidden;
-            this.MainText.Visibility = Visibility.Hidden;
-            Firestorehelper.SetEnviromentVariable();
+                this.Sidebar.Visibility = Visibility.Hidden;
+                this.UserIcon.Visibility = Visibility.Hidden;
+                this.Chat.Visibility = Visibility.Hidden;
+                this.MainText.Visibility = Visibility.Hidden;
+                Firestorehelper.SetEnviromentVariable();
 
-        }
+            }
 
         //Encrypted Password
         public static string Encrypt(string text)
@@ -238,8 +237,14 @@ namespace PVO
                     var db = Firestorehelper.database;
                     DocumentReference docRef = db.Collection("UserData").Document(username);
                     UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
+                    if (data == null)
+                    {
+                        MessageBox.Show("Could not find user");
+                    }
 
-                    if (password != null)
+
+
+                    else if (password != null)
                     {
                         if (password == Decrypt(data.PassWord))
                         {
@@ -262,13 +267,13 @@ namespace PVO
                         }
                         else
                         {
-                            MessageBox.Show("failed");
+                            MessageBox.Show("Could not find user");
 
                         }
                     }
                     else
                     {
-                        MessageBox.Show("failed");
+                        MessageBox.Show("Could not find user");
                     }
                 }
             }
@@ -573,7 +578,13 @@ namespace PVO
             DocumentReference docRef = db.Collection("UserData").Document(username);
             UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
 
-            if(password != null)
+
+            if ( data == null)
+            {
+                MessageBox.Show("Could not find user");
+            }
+
+            else if(password != null)
             {
                 if(password == Decrypt(data.PassWord))
                 {
@@ -596,12 +607,12 @@ namespace PVO
                 }
                 else
                 {
-                    MessageBox.Show("failed");
+                    MessageBox.Show("Could not find user");
 
                 }
             } else
             {
-                MessageBox.Show("failed");
+                MessageBox.Show("Could not find user");
             }
 
         }
@@ -622,6 +633,7 @@ namespace PVO
             return false;   
 
         }
+
     }
 
 }

@@ -1,20 +1,21 @@
-﻿<Window x:Class="PVO.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PVO"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="PVO.MainWindow"
         mc:Ignorable="d"
         Title="1337 HandB00K"  Loaded="Window_Loaded"
         x:Name="FirstWindow" Icon="img\favicon.ico">
 
 
     <Window.Background>
-        <ImageBrush  ImageSource="img\1.webp"></ImageBrush>
+        <ImageBrush  ImageSource="img\1.webp"/>
     </Window.Background>
 
     <Viewbox Stretch="Uniform">
-        
+
         <Grid Margin="0,0,10,-6">
             <Grid.RowDefinitions>
                 <RowDefinition Height="10*"/>
@@ -25,17 +26,18 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            
-            
+
+
+            <!--login-->
+
+            <!--offline warning-->
+
             <!--CHAT-->
             <Grid Grid.Column="1" Grid.Row="1" x:Name="Chat">
-                <Rectangle Grid.Column="1" MaxWidth="300"  MinWidth="300" Margin="1014,38,20,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
+                <Rectangle Grid.Column="1" MaxWidth="300"  MinWidth="300" Margin="1014,38,20,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674" Fill="#161616">
                     <Rectangle.Effect>
                         <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25" />
                     </Rectangle.Effect>
-                    <Rectangle.Fill>
-                        <SolidColorBrush Color="#161616" />
-                    </Rectangle.Fill>
                 </Rectangle>
                 <TextBox x:Name="UserInput" KeyDown="OnKeyDown" Grid.Column="1" Margin="1045,557,52,103" TextWrapping="Wrap" Text="" MinWidth="230" MaxHeight="70" MaxWidth="230" MinHeight="60" Grid.Row="1" Padding="10,10,10,10">
                     <TextBox.Resources>
@@ -44,19 +46,16 @@
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
                     <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="Ask Me Anything!, I am Happy to Help With Your Questions!" Foreground="White" />
                 </ScrollViewer>
             </Grid>
             <!--CHAT-->
 
-            <Rectangle x:Name="MainWindowView" Grid.Column="1"   MinWidth="300" Margin="158,38,366,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
+            <Rectangle x:Name="MainWindowView" Grid.Column="1"   MinWidth="300" Margin="158,38,366,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674" Fill="#161616">
                 <Rectangle.Effect>
                     <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25"/>
                 </Rectangle.Effect>
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="#161616" />
-                </Rectangle.Fill>
             </Rectangle>
 
             <!--SIDE BAR-->
@@ -73,10 +72,8 @@
                         <MenuItem.Header>
                             <Image x:Name="FirstIcon" Source="img\World.png" Width="59" Height="60" RenderTransformOrigin="0.5,0.508"  />
                         </MenuItem.Header>
-                        <MenuItem Click="Internet" Header="SQL Injection">
-                        </MenuItem>
-                        <MenuItem Click="Internet" Header="Data Base">
-                        </MenuItem>
+                        <MenuItem Click="Internet" Header="SQL Injection"/>
+                        <MenuItem Click="Internet" Header="Data Base"/>
                     </MenuItem>
                 </Menu>
 
@@ -86,8 +83,7 @@
                         <MenuItem.Header>
                             <Image  x:Name="SecondIcon" Source="\img\icons8-web-shield-48.png" Width="59" Height="60"  />
                         </MenuItem.Header>
-                        <MenuItem Click="Security" Header="About your security">
-                        </MenuItem>
+                        <MenuItem Click="Security" Header="About your security"/>
                     </MenuItem>
                 </Menu>
 
@@ -121,49 +117,20 @@
             </Grid>
             <!--SIDE BAR-->
 
-            <!--<ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2" Margin="1037,79,44,228" Grid.RowSpan="2" MaxHeight="430" MaxWidth="263" >
-                <TextBlock x:Name="Chatbox" TextWrapping="Wrap" Text="Ask Me Anything!, I am Happy to Help With Your Questions!" Foreground="White" />
-            </ScrollViewer>-->
 
-            <ScrollViewer VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Margin="181,70,397,85" Grid.RowSpan="2" Grid.Column="1" MaxHeight="580" MaxWidth="757" >
+            <ScrollViewer VerticalScrollBarVisibility="hidden" ScrollViewer.CanContentScroll="True" Margin="181,70,397,85" Grid.RowSpan="2" Grid.Column="1" MaxHeight="580" MaxWidth="757" >
 
-                <TextBlock x:Name="MainText" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" Foreground="White" Grid.ColumnSpan="2"  Grid.RowSpan="2">
-                <Span>
-                    <Run x:Name="OpeningMessage" Text="Welcome to the Leet Book"/>
-                    
-                    <Run x:Name="MainTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/> <LineBreak/> 
-                    <Run x:Name="MainTitleText" Text=""/> <LineBreak/><LineBreak/>
-                    
-                    <Run x:Name="InfoTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/> <LineBreak/> 
-                    <Run x:Name="InfoText" Text=""/><LineBreak/><LineBreak/>
-
-                    <Run x:Name="ProblemTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/> <LineBreak/>
-                    <Run x:Name="ProblemText" Text=""/> <LineBreak/> <LineBreak/>
-
-                    <Run x:Name="SolutionTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/> <LineBreak/>
-                   <Run x:Name="SolutionText" Text=""/> <LineBreak/> <LineBreak/>
-
-                    <Run x:Name="ExamplesTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/> <LineBreak/>
-                    <Run x:Name="ExamplesText" Text=""/> <LineBreak/> <LineBreak/>
-
-                    <Run x:Name="ResourcesTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/> <LineBreak/>
-                    <Run x:Name="ResourcesText" Text=""/>
-
-                </Span>
-                </TextBlock>
+                <TextBlock x:Name="MainText" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" Foreground="White" Grid.ColumnSpan="2"  Grid.RowSpan="2"><Span><Run x:Name="OpeningMessage" Text="Welcome to the Leet Book"/><Run Text=" "/><Run x:Name="MainTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="MainTitleText" Text=""/><LineBreak/><LineBreak/><Run x:Name="InfoTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="InfoText" Text=""/><LineBreak/><LineBreak/><Run x:Name="ProblemTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="ProblemText" Text=""/><LineBreak/><LineBreak/><Run x:Name="SolutionTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="SolutionText" Text=""/><LineBreak/><LineBreak/><Run x:Name="ExamplesTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="ExamplesText" Text=""/><LineBreak/><LineBreak/><Run x:Name="ResourcesTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="ResourcesText" Text=""/></Span></TextBlock>
 
             </ScrollViewer>
             <!--login-->
             <Grid Grid.Column="1" x:Name="login" Grid.Row="1" Visibility="Visible">
-                <Rectangle x:Name="MainWindowViewLogin"  Grid.Column="5" MinWidth="300" Margin="158,38,366,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674">
+                <Rectangle x:Name="MainWindowViewLogin"  Grid.Column="5" MinWidth="300"  Margin="158,38,366,58" Grid.Row="1" RadiusX="70.674" RadiusY="70.674" Fill="#161616">
                     <Rectangle.Effect>
                         <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25"/>
                     </Rectangle.Effect>
-                    <Rectangle.Fill>
-                        <SolidColorBrush Color="#161616" />
-                    </Rectangle.Fill>
                 </Rectangle>
-                <TextBox x:Name="UserInputLoginUser" Grid.Column="5" Margin="378,390,586,334" FontSize="14" TextWrapping="Wrap" Text="" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494">
+                <TextBox x:Name="UserInputLoginUser" Grid.Column="5" Margin="378,390,586,334" FontSize="14" TextWrapping="Wrap" TextAlignment="Center" Text="" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10" />
@@ -177,37 +144,33 @@
                         </Style>
                     </TextBox.Resources>
                 </TextBox>-->
-                <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" x:Name="UserInputLoginPassword" KeyDown="OnKeyDown" Grid.Column="5" Margin="376,448,586,276" FontSize="14" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" Background="#949494"/>
-
+                <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" x:Name="UserInputLoginPassword" KeyDown="OnKeyDown" Grid.Column="5" Margin="376,448,586,276" FontSize="14" MinWidth="230"  Grid.Row="1" Padding="10,10,10,10" TextBlock.TextAlignment="Center" Background="#949494"/>
 
                 <Button Style="{DynamicResource lvl1btn}" x:Name="loginBtn" Content="Login" Margin="512,555,720,168" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="loginbtn"/>
                 <Button Style="{DynamicResource lvl1btn}" x:Name="CreateBtn" Content="Create a Leet account" Margin="266,555,926,170" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="CreateAcc"/>
                 <Button Style="{DynamicResource lvl1btn}" x:Name="Offilinebtn" Content="Offline" Margin="705,555,487,169" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="OfflineWarning"/>
 
-                <Image x:Name="LoginLogo" Margin="353,120,566,438" Grid.Row="1" Grid.Column="5" MaxHeight="200" MaxWidth="200" Width="200" Height="200" />
+                <Image x:Name="LoginLogo" Source="\img\original.png" Margin="353,120,566,438" Grid.Row="1" Grid.Column="5" MaxHeight="200" MaxWidth="200" Width="200" Height="200" />
+
+
+
+
 
 
 
 
             </Grid>
-            <!--login-->
-
             <!--offline warning-->
             <Grid Grid.Column="1" x:Name="OfflineWarningGrid" Grid.Row="1" Visibility="Hidden">
-                <Rectangle x:Name="OfflineWarningBox" MinWidth="300" Margin="266,112,465,430" RadiusX="70.674" RadiusY="70.674">
+                <Rectangle x:Name="OfflineWarningBox" MinWidth="300" Margin="266,112,465,430" RadiusX="70.674" RadiusY="70.674" Fill="#161616">
                     <Rectangle.Effect>
                         <DropShadowEffect BlurRadius="85" Opacity="0.95" ShadowDepth="1" Direction="25"/>
                     </Rectangle.Effect>
-                    <Rectangle.Fill>
-                        <SolidColorBrush Color="#161616" />
-                    </Rectangle.Fill>
                 </Rectangle>
                 <Button Style="{DynamicResource lvl1btn}" x:Name="OffilineOKbtn" Content="Ok" Margin="490,268,702,456" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Click="UserLogin"/>
                 <TextBlock HorizontalAlignment="Left" Margin="389,198,0,0" TextWrapping="Wrap" Text="User data will not be saved" VerticalAlignment="Top" Foreground="white" FontSize="30"/>
                 <TextBlock HorizontalAlignment="Left" Margin="507,130,0,0" TextWrapping="Wrap" Text="Warning!!!" VerticalAlignment="Top" Foreground="Yellow" FontSize="30"/>
             </Grid>
-            <!--offline warning-->
-
             <!--level buttons-->
             <Button Style="{DynamicResource lvl1btn}" x:Name="Level1" x:Uid="lvlbtn" Content="Level 1" Grid.Column="1" Margin="1120,170,126,529" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Hidden" Click="Level1_Click"/>
             <Button Style="{DynamicResource lvl1btn}" x:Name="Level2" x:Uid="lvlbtn" Content="Level 2" Grid.Column="1" Margin="1120,284,126,415" Grid.Row="1" Background="#0C71E0" Foreground="White" BorderBrush="Transparent" Visibility="Hidden" Click="Level2_Click"/>
@@ -216,11 +179,11 @@
 
             <Button x:Name="UserIcon" Grid.Column="1" Margin="35,675,1240,19" Grid.Row="1" Click="UserLogin">
                 <Button.Template>
-                    <ControlTemplate TargetType="Button">
+                    <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
                             <Ellipse Stroke="Transparent" StrokeThickness="0">
                                 <Ellipse.Fill>
-                                    <ImageBrush Stretch="Uniform" ImageSource="{Binding ElementName=UserIMG, Path=Source}"/>
+                                    <ImageBrush Stretch="Uniform" ImageSource="{Binding Source, ElementName=UserIMG}"/>
                                 </Ellipse.Fill>
                             </Ellipse>
                             <ContentPresenter HorizontalAlignment="Center"  

@@ -148,3 +148,13 @@ C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\Grpc.
 C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\System.Linq.Async.dll
 C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\System.Management.dll
 C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\FireSharp.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\Microsoft.Threading.Tasks.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\System.Net.Http.Extensions.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\System.Net.Http.Primitives.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\Caliburn.Micro.Platform.Core.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\Caliburn.Micro.Platform.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\Caliburn.Micro.Core.dll
+C:\Users\jeera\Documents\GitHub\project-6\PVO\PVO\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
