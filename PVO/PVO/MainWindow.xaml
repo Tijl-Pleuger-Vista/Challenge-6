@@ -7,6 +7,8 @@
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="PVO.MainWindow"
         mc:Ignorable="d"
         Title="1337 HandB00K"  Loaded="Window_Loaded"
+        MinHeight="830"
+        MinWidth="1400"
         x:Name="FirstWindow" Icon="img\favicon.ico">
 
 
@@ -117,7 +119,7 @@
             </Grid>
             <!--SIDE BAR-->
 
-
+            <!--Main text scroll-->
             <ScrollViewer VerticalScrollBarVisibility="hidden" ScrollViewer.CanContentScroll="True" Margin="181,70,397,85" Grid.RowSpan="2" Grid.Column="1" MaxHeight="580" MaxWidth="757" >
 
                 <TextBlock x:Name="MainText" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" Foreground="White" Grid.ColumnSpan="2"  Grid.RowSpan="2"><Span><Run x:Name="OpeningMessage" Text="Welcome to the Leet Book"/><Run Text=" "/><Run x:Name="MainTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="MainTitleText" Text=""/><LineBreak/><LineBreak/><Run x:Name="InfoTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="InfoText" Text=""/><LineBreak/><LineBreak/><Run x:Name="ProblemTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="ProblemText" Text=""/><LineBreak/><LineBreak/><Run x:Name="SolutionTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="SolutionText" Text=""/><LineBreak/><LineBreak/><Run x:Name="ExamplesTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="ExamplesText" Text=""/><LineBreak/><LineBreak/><Run x:Name="ResourcesTitle" Foreground="red" FontSize="25" FontWeight="Bold" Text=""/><LineBreak/><Run x:Name="ResourcesText" Text=""/></Span></TextBlock>
@@ -194,6 +196,7 @@
             </Button>
 
             <Image x:Name="UserIMG" Visibility="Hidden"  Margin="566,223,780,542" Grid.Row="1" Grid.Column="1" MaxHeight="0" MaxWidth="0"/>
+
 
 
 

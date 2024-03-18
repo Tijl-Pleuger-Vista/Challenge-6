@@ -41,8 +41,7 @@ namespace PVO
     public partial class MainWindow : Window
     {
         string imgs = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
-        //string solutionDir = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
-        string solutionDir = System.IO.Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName);
+        string solutionDir = "C:\\Users\\jeera\\Documents\\GitHub\\project-6\\PVO\\PVO\\";
         int? Arraylength = 0;
         string? clickedsubject;
 
@@ -87,7 +86,19 @@ namespace PVO
             public string? PassWord { get; set; }
 
             [FirestoreProperty]
-            public int? XP { get; set; }
+            public string? userXP { get; set; }
+        }
+
+        [FirestoreData]
+        class checkProgress
+        {
+            [FirestoreProperty]
+            public string? sql { get; set; }
+            [FirestoreProperty]
+            public string? database { get; set; }
+            [FirestoreProperty]
+            public string? user { get; set; }
+
         }
 
         //On App load
@@ -288,7 +299,7 @@ namespace PVO
                 string user_input = UserInput.Text;
 
                 //authApi
-                var authentication = new APIAuthentication("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");
+                var authentication = new APIAuthentication("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");
                 var api = new OpenAIAPI(authentication);
 
                 // Start a new chat
@@ -327,6 +338,9 @@ namespace PVO
         private void Level1_Click(object sender, RoutedEventArgs e)
         {
 
+
+
+
             //read the json
             
             string text = File.ReadAllText(solutionDir + "\\Json\\" + clickedsubject + ".json");
@@ -362,16 +376,19 @@ namespace PVO
             this.Level2.Visibility = Visibility.Hidden;
             this.Level3.Visibility = Visibility.Hidden;
 
-            if (UserInputLoginUser.Text != "")
-            {
-                //fils xp if user logged in
-                string username = UserInputLoginUser.Text.Trim();
-                var db = Firestorehelper.database;
-                DocumentReference docRef = db.Collection("UserData").Document(username);
-                UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
+            //if (UserInputLoginUser.Text != "")
+            //{
+            //    //fils xp if user logged in
+            //    string username = UserInputLoginUser.Text.Trim();
+            //    string password = UserInputLoginPassword.Password;
+            //    var db = Firestorehelper.database;
+            //    DocumentReference docRef = db.Collection("UserData").Document(username);
+            //    UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
+            //    data.userXP = InfoArray.Subject[0].xp;
+            //    docRef.SetAsync(data);
 
-                data.XP = Int32.Parse(this.ResourcesText.Text = InfoArray.Subject[0].xp);
-            }
+                
+            //}
 
 
 
@@ -423,7 +440,7 @@ namespace PVO
                 DocumentReference docRef = db.Collection("UserData").Document(username);
                 UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
 
-                data.XP = Int32.Parse(this.ResourcesText.Text = InfoArray.Subject[0].xp);
+                data.userXP = InfoArray.Subject[0].xp;
             }
         }
 
@@ -472,7 +489,7 @@ namespace PVO
                 DocumentReference docRef = db.Collection("UserData").Document(username);
                 UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
 
-                data.XP = Int32.Parse(this.ResourcesText.Text = InfoArray.Subject[0].xp);
+                data.userXP = InfoArray.Subject[0].xp;
             }
 
 
@@ -480,7 +497,7 @@ namespace PVO
 
         public void LevelCount()
         {
-            string text = File.ReadAllText(solutionDir + "\\Json\\SQLInjection.json");
+            string text = File.ReadAllText(solutionDir + "\\Json\\" + clickedsubject + ".json");
             var InfoArray = JsonSerializer.Deserialize<Subjects>(text)!;
             Arraylength = InfoArray.Subject!.Length;
 
@@ -522,7 +539,7 @@ namespace PVO
 
 
 
-            string url = "https://pvo-limburg.nl/";
+            string url = "https://tijl-pleuger-vista.github.io/website.github.io/public/leet-handbook/";
 
             try
             {
@@ -572,23 +589,42 @@ namespace PVO
 
         private void loginbtn(object sender, RoutedEventArgs e)
         {
-            string username = UserInputLoginUser.Text.Trim();
-            string password = UserInputLoginPassword.Password;
-            var db = Firestorehelper.database;
-            DocumentReference docRef = db.Collection("UserData").Document(username);
-            UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
 
-
-            if ( data == null)
+             try
             {
-                MessageBox.Show("Could not find user");
-            }
+                string username = UserInputLoginUser.Text.Trim();
+                string password = UserInputLoginPassword.Password;
+                var db = Firestorehelper.database;
+                DocumentReference docRef = db.Collection("UserData").Document(username);
+                DocumentReference docRefXp = db.Collection("UserProgress").Document(username);
+                UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
+                checkProgress xpdata = docRefXp.GetSnapshotAsync().Result.ConvertTo<checkProgress>();
+                if (xpdata == null)
+                {
+                    docRefXp.SetAsync(data);
+                    MessageBox.Show("Success");
+                }
 
-            else if(password != null)
+                xpdata.user = data.UserName;
+                xpdata.sql = "1";
+
+                docRefXp.SetAsync(xpdata);
+
+
+
+
+                if ( data == null)
+                {
+                    MessageBox.Show("Could not find user");
+
+                }
+
+                else if(password != null)
             {
                 if(password == Decrypt(data.PassWord))
                 {
-                    if (this.login.Visibility == Visibility.Hidden)
+                        
+                        if (this.login.Visibility == Visibility.Hidden)
                     {
                         this.MainWindowView.Visibility = Visibility.Hidden;
                         this.login.Visibility = Visibility.Visible;
@@ -614,6 +650,11 @@ namespace PVO
             {
                 MessageBox.Show("Could not find user");
             }
+            }
+            catch
+            {
+                MessageBox.Show("Please enter a valid Username/Password!!! or go OFFLINE");
+            };
 
         }
 
@@ -631,6 +672,22 @@ namespace PVO
             }
 
             return false;   
+
+        }
+
+        private void reachBottom (object sender, ScrollEventArgs e)
+        {
+
+            ScrollBar sb = e.OriginalSource as ScrollBar;
+
+            if (sb.Orientation == Orientation.Horizontal)
+                return;
+
+            if (sb.Value == sb.Maximum)
+            {
+              MessageBox.Show("At the bottom of the list!");
+
+            }
 
         }
 
