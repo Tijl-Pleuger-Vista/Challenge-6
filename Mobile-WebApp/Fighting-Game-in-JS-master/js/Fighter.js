@@ -180,7 +180,7 @@ export const player = new Fighter({
     sprites: {  // Sprites for different animations.
         idle: {
             imageSrc: '/assets/img/samuraiMack/Idle.png',
-            maxFrames: 8,
+            maxFrames: 4,
         },
         run: {
             imageSrc: '/assets/img/samuraiMack/Run.png',
