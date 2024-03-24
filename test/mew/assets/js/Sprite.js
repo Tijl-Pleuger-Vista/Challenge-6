@@ -56,7 +56,17 @@ export const background = new Sprite({
         x: 0,
         y: 0
     },
-    imageSrc: '/assets/img/background.png'
+    imageSrc: 'https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/game/background.png',
+    scale: 1.21,
+})
+
+export const background0 = new Sprite({
+    position: {
+        x: 800,
+        y: 0
+    },
+    imageSrc: 'https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/game/background.png',
+    scale: 1.21,
 })
 
 export const shop = new Sprite({
@@ -64,7 +74,7 @@ export const shop = new Sprite({
         x: 620,
         y: 128
     },
-    imageSrc: '/assets/img/shop.png',
+    imageSrc: 'https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/game/shop.png',
     scale: 2.75,
     maxFrames: 6,
     holdFrames: 9

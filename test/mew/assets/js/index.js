@@ -1,5 +1,5 @@
 import { player, enemy } from './Fighter.js'
-import { background, shop } from './Sprite.js';
+import { background, background0, shop } from './Sprite.js';
 import { loadKeyDownEvents, loadkeyUpEvents } from './Keys.js'
 
 const canvas = document.querySelector('canvas');
@@ -48,6 +48,7 @@ function decreaseTimer() {
 function animate() {
     window.requestAnimationFrame(animate);  // Set this as a recursive function.
     background.update();
+    background0.update();
     shop.update();
     update(player);
     update(enemy);

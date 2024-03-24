@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The Leet handbook - Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Are you secure from cyber attacks?">
+        <meta name="twitter:description" content="Click here to learn about the value of cyber security">
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/project-6/main/app/assets/content/logo/init/android-chrome-512x512.png">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Are you secure from cyber attacks?">
+        <meta property="og:url" content="https://headbodyscript.nl/">
+        <meta property="og:image" content="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/project-6/main/app/assets/content/logo/init/android-chrome-512x512.png">
+        <meta property="og:description" content="Click here to learn about the value of cyber security">
+
+        <meta name="description" content="Click here to learn about the value of cyber security">
+        <meta name="keywords" content="Cybersecurity, Cyber, Security">
+        <meta name="author" content="HeadBodyScript">
+        <meta name="language" content="EN">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
+        <link rel="manifest" href="assets/logo/site.webmanifest">
+        
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="menu" class="menu">
+                <div class="title; animate-charcter">Fighting Game!</div>
+                <div class="options">
+                    <div id="1player" class="menuOption">Start</div>
+                    <div id="2players" class="menuOption">Player vs Player</div>
+                </div>
+            </div>
+            <div id="hud" class="hud">
+                <div class="healthLayout"><!-- Player's health -->
+                    <div class="remainingHealthbar"></div>
+                    <div id="playerHealth" class="totalHealthBar"></div>
+                </div>
+                <div id="timer" class="timer">--</div><!-- Timer -->
+                <div class="healthLayout"><!-- Enemy's health -->
+                    <div class="remainingHealthbar"></div>
+                    <div id="enemyHealth" class="totalHealthBar"></div>
+                </div>
+            </div>
+            <div id="result" class="result">result</div>
+            <div class="game">
+                <canvas id="gameWindow"></canvas>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+            integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="assets/js/index.js"></script>
+    </body>
+</html>
