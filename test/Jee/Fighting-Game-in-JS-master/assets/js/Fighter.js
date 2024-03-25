@@ -172,14 +172,14 @@ export const player = new Fighter({
         x: 75,
         y: 0
     },
-    imageSrc: '/assets/img/samuraiMack/Idle.png',
+    imageSrc: 'https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/game/samuraiMack/Idle.png',
     scale: 2.5,
     maxFrames: 8,
     holdFrames: 4,
     offsetFrame: { x: 215, y: 154 },
     sprites: {  // Sprites for different animations.
         idle: {
-            imageSrc: '/assets/img/samuraiMack/Idle.png',
+            imageSrc: 'https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/game/samuraiMack/Idle.png',
             maxFrames: 8,
         },
         run: {
