@@ -1,0 +1,33 @@
+{
+    "cloud": [
+        {
+            "cloudStorageDataExfiltration": "",
+            "UnsecureThirdPartyResources": ""
+        }
+    ],
+    "firewall": [
+        {
+            "DDoSAttacks": "",
+            "insiderAttacks": "",
+            "outdatedFirewallSoftware": "",
+            "impropperConfiguration":"",
+            "basicInspectionProtocols":"",
+            "lackOfDocumentation":"",
+            "failureToActivateControls":""
+        }
+    ],
+    "network": [
+        {
+            "viruses":"",
+            "phishingAttacks": "",
+            "ransomware": "",
+            "DDoSAttacks":"",
+            "spyware":""
+        }
+    ],
+    "opsec": [
+        {
+          "noIdea": ""
+        }
+    ]
+}

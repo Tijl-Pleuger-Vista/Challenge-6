@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
+        <link rel="manifest" href="assets/logo/site.webmanifest">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <title>Placeholder Title</title>
+    </head>
+    <body>
+        <div class="container mt-10">
+            <div id="menu" class="menu">
+                <div class="w title animate-title row center" id="displayTitle">
+                    <p class="mr-5">Placeholder</p><p class="mr-5">Title</p>
+                </div>
+                <div class="w center description" id="displayDescription">
+
+                </div>
+                <div class="options">
+                    <div id="init" class="menuOption">
+                        <p id="displayStart">Placeholder start</p>
+                    </div>
+                </div>
+                <div class="w center author" id="displayAuthor">Placeholder author</div>
+            </div>
+            <div class="column">
+                <div class="game">
+                    <canvas id="gameWindow"> </canvas>
+                </div>
+                <div id="hud" class="hud">
+                    <div class="healthLayoutAntagonist">
+                        <div class="center">
+                            <p class="AntagonistName" id="displayAntagonistName">Placeholder Antagonist</p>
+                        </div>
+                        <div class="remainingHealthbar"></div>
+                        <div id="antagonistHealth" class="antagonistHealthTotal"></div>
+                    </div>
+                    <div id="question" class="question center">
+                        <p id="displayQuestion">Placeholder question</p>
+                    </div>
+                    <div class="healthLayoutPlayer">
+                        <div class="center">
+                            <p class="playerName" id="displayPlayerName">Placeholder Player</p>
+                        </div>
+                        <div class="remainingHealthbar"></div>
+                        <div id="playerHealth" class="playerHealthTotal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w mt-20 center">
+            <div id="displayButtons" class="center column" style="visibility: hidden; width: 350px;">
+                <div class="flex" id="flex">
+                    <button class="button div1" id="displayButtonAplha">Placeholder answer one</button>
+                    <button class="button div2" id="displayButtonBeta">Placeholder answer two</button>
+                    <button class="button div3" id="displayButtonCharlie">Placeholder answer two</button>
+                    <button class="button div4" id="displayButtonDelta">Placeholder answer two</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+            integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="assets/js/index.js"></script>
+    </body>
+</html>

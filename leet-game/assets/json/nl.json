@@ -1,0 +1,183 @@
+{
+  "lang": "NL",
+  "init":{
+    "name": "PVO Game",
+    "description": "EEN VEILIGE REIS VOOR EEN MKB-ONDERNEMER",
+    "hero": "Hero",
+    "enemy": "Enemy",
+    "start": "Klick om te beginnen",
+    "credits": "Vista-College Studenten",
+    "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen"
+  },
+  "sprites":{
+    "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/background.png",
+    "hero": 
+      {
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/idle.png",
+        "idleMaxFrames": "8",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack.png",
+        "attackMaxFrames": "6",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage.png",
+        "damageMaxFrames": "4",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png",
+        "deathMaxFrames": "6"
+      },
+    
+    "villain": 
+      {
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/idle.png",
+        "idleMaxFrames": "4",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack.png",
+        "attackMaxFrames": "4",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage.png",
+        "damageMaxFrames": "3",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/death.png",
+        "deathMaxFrames": "7"
+      }
+  },
+  "colors":{
+    "hero": 
+      {
+        "min": "#6C192B",
+        "max": "#AF2424"
+      },
+    "villain": 
+      {
+        "min": "#004ff9",
+        "max": "#333892"
+      }
+  },
+  "questions": [
+    {
+      "question": "Should you update your software regularly?",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+        "explanation": "Regular software updates help patch security vulnerabilities that hackers could exploit. Set up automatic updates if possible."
+    },
+    {
+      "question": "What is 2FA",
+      "answer": "1",
+      "button": [
+        {
+          "text": "A football team"
+        },
+        {
+          "text": "Two Factor Authetecation"
+        }
+      ],
+      "explanation": "(2FA) is an identity and access management security method that requires two forms of identification to access resources and data"
+    },
+    {
+      "question": "Do you teach your team how to stay safe online?",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "explanation": "Provide cybersecurity training to your employees, covering topics like phishing awareness and safe internet browsing habits."
+    },
+    {
+      "question": "Is it smart to click on unknown links",
+      "answer": "1",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "explanation": "Clicking on a phishing link can sometimes set off a malware download that contains malicious files capable of harvesting information stored on your device"
+    },
+
+    {
+      "question": "Do you use encryption to keep your information safe from hackers?",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "explanation": "Use encryption for sensitive data, both in transit (e.g., using HTTPS) and at rest (e.g., encrypting files or databases)."
+    },
+    {
+      "question": "Do you have a plan for if something goes wrong with your data?",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "explanation": "Create a comprehensive disaster recovery plan outlining steps to take in case of a cyber incident, including data backup and restoration procedures."
+    },
+    {
+      "question": "Have you made sure your employees' home computers are safe for work?",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "explanation": "Provide guidelines for securing home computers, such as installing antivirus software, enabling firewalls, and keeping software up to date."
+    },
+    {
+      "question": "Do you control who can access your company's files and systems?",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],      "explanation": "Implement access controls and user permissions to ensure that only authorized individuals can access sensitive company resources."
+    },
+    {
+      "question": "Do you use two or more steps to log in to important accounts?",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "explanation": "Enable multi-factor authentication (MFA) whenever possible to add an extra layer of security beyond just a password."
+    },
+    {
+      "question": "Do you have insurance in case something bad happens to your data?",
+      "answer": "0",
+      "button": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "explanation": "Consider getting cybersecurity insurance to help mitigate financial losses and recovery costs in the event of a data breach or cyber incident."
+    }
+  ]
+}
+
