@@ -64,9 +64,7 @@ function checkUserReconnectLogin(auth, userCreds, userPass) {
         })
     })
     .catch((error)=>{
-        // alert(error.message);
-        console.log(error.code);
-        console.log(error.message);
+
     })
 }
 

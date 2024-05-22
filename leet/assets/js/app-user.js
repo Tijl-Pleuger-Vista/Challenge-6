@@ -16,7 +16,6 @@ root.style.setProperty('--experience', 471);
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-// import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCqm-YZF8LyrBd3t-pmtG6vzbtD7hpkPWg",
@@ -30,17 +29,15 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+
 const db = getDatabase();
 const auth = getAuth(app);
 const dbref = ref(db);
 
-    // Register
 let usernameRegister = document.getElementById('usernameRegister');
 let userEmailRegister = document.getElementById('emailRegister');
 let userPasswordRegister = document.getElementById('passwordRegister');
 
-    // Login
 let userEmailLogin = document.getElementById('emailLogin');
 let userPasswordLogin = document.getElementById('passwordLogin');
 
@@ -58,7 +55,7 @@ let registerUser = evt => {
         setTimeout(registerUserCompleted(auth, userEmailRegister.value, userPasswordRegister.value), 2000);
     })
     .catch((error)=>{
-        // alert(error.message);
+
         console.log(error.code);
         console.log(error.message);
     })
@@ -81,7 +78,7 @@ let registerUserCompleted = evt => {
         localStorage.setItem("user-password", userPasswordRegister.value)
     })
     .catch((error)=>{
-        // alert(error.message);
+
         console.log(error.code);
         console.log(error.message);
     })
@@ -105,7 +102,7 @@ let loginUser = evt => {
         localStorage.setItem("user-password", userPasswordLogin.value)
     })
     .catch((error)=>{
-        // alert(error.message);
+
         console.log(error.code);
         console.log(error.message);
     })
@@ -161,9 +158,8 @@ function checkUserReconnectLogin(auth, userCreds, userPass) {
         })
     })
     .catch((error)=>{
-        // alert(error.message);
+
         console.log(error.code);
         console.log(error.message);
     })
 }
-var myVar = oldVar.stuff

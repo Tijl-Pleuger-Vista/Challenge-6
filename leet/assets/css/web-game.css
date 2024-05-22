@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'silver';
-    src: url(../fonts/Silver.ttf);
+    src: url(../fonts/silver.ttf);
 }
 @font-face {
     font-family:"Madimi One";
@@ -23,7 +23,7 @@
 body {
     box-sizing: border-box;
     background-size: 100% 100dvh;
-    background-image: url(https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-handbook/assets/webp/2.webp);
+    background-image: url(https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/webp/2.webp);
     background-attachment: fixed;
 }
 

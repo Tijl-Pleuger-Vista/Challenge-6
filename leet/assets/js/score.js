@@ -11,23 +11,14 @@ let checkJson = JSON.parse(localStorage.getItem("json"));
 
 let checkData = JSON.parse(localStorage.getItem("data"));
 
-
-console.log(checkJson)
-console.log(checkData)
-
 var amount = checkData.amount
 var total = checkData.total
 
 var amount = amount * 10
 var total = total * 10
 
-console.log(amount)
-console.log(total)
+var calc = (100 * amount) / total;
 
-
-var calc = total - amount
-
-console.log("calc " + calc)
 document.getElementById("meow").innerHTML = `<a href="${checkJson.init.href}">Click here to learn more</a>`
 
 var userExperience = 471 - calc - calc

@@ -2,7 +2,6 @@ var theme = 0
 
 function btnTheme(){
     var r = document.querySelector(':root');
-    console.log("test")
     theme++
     if(theme === 1){
         r.style.setProperty('--filter', "rgba(46, 46, 46, 0.15)");
