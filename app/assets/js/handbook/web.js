@@ -30,5 +30,5 @@ function userLogoutOpen(){
     localStorage.removeItem("user-email");
     localStorage.removeItem("user-password");
     localStorage.removeItem("user-creds");
-    window.location.href = '../handbook/index.html';
+    window.location.href = '../index.html';
 }

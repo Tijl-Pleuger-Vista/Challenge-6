@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Leet Handbook</title>
+    <title>The Leet handbook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Are you secure from cyber attacks?">
     <meta name="twitter:description" content="Click here to learn about the value of cyber security">
-    <meta name="twitter:image"
-        content="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/icon/icon.svg">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/icon/icon.svg">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Are you secure from cyber attacks?">
     <meta property="og:url" content="https://headbodyscript.nl/">
-    <meta property="og:image"
-        content="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/icon/icon.svg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/icon/icon.svg">
     <meta property="og:description" content="Click here to learn about the value of cyber security">
 
     <meta name="description" content="Click here to learn about the value of cyber security">
@@ -23,253 +21,98 @@
     <meta name="author" content="HeadBodyScript">
     <meta name="language" content="EN">
 
-    <link rel="icon" href="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/icon/icon.svg">
-    <link rel="stylesheet" href="../assets/css/app-handbook.css">
-    <script src="../assets/js/app-handbook.js"></script>
+    <link rel="icon" href="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/icon/icon.svg">
+    <link rel="stylesheet" href="../assets/css/handbook/app.css">
+    <script src="../assets/js/handbook/app.js"></script>
 </head>
 <body>
-    <header class="card center column">
-        <div class="card-content center column">
-            <div class="row user">
-                <div id="displayUsername" class="center mr-30">
-                </div>
-                <div class="row">
-                    <button id="theme" onclick="btnTheme()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-moon-stars" viewBox="0 0 16 16">
-                            <path
-                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
-                            <path
-                                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
-                            <path
-                                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
-                        </svg>
-                    </button>
-                </div>
-                <div id="displayLoginLogout" class="center">
-                    <h2><button onclick="userLoginOpen()">Login</button></h2>
-                </div>
-                <div>
-                    <div class="skill">
-                        <div class="outer">
-                            <div class="inner column">
-                                <div id="displayExperience">0%</div>
+    <div class="card">
+        <div class="filter">
+            <header class="center">
+                <div class="center column">
+                    <div class="row user">
+                        <div id="displayUsername" class="center mr-30">
+                        </div>
+                        <div class="row">
+                            <button id="theme" onclick="btnTheme()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-moon-stars" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                                    <path
+                                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                                    <path
+                                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="displayLoginLogout" class="center">
+                            <h2><button onclick="userLoginOpen()">Login</button></h2>
+                        </div>
+                        <div>
+                            <div class="skill">
+                                <div class="outer">
+                                    <div class="inner column">
+                                        <div id="displayExperience">0%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="80px" height="80px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#562468" />
+                                            <stop offset="100%" stop-color="#F499BF" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="40" cy="40" r="35" stroke-linecap="round" />
+                                </svg>
                             </div>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="80px" height="80px">
-                            <defs>
-                                <linearGradient id="GradientColor">
-                                    <stop offset="0%" stop-color="#562468" />
-                                    <stop offset="100%" stop-color="#F499BF" />
-                                </linearGradient>
-                            </defs>
-                            <circle cx="40" cy="40" r="35" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="center ml-30 mr-30">
-                    <div id="displayLevel"></div>
-                </div>
-            </div>
-            <div class="row logo center">
-                <div class="logo-txt mb-30">
-                    <h1>Security</h1>
-                </div>
-                <div class="logo-txt mb-30">
-                    <h1>handbook</h1>
-                </div>
-            </div>
-            <div class="row download center">
-                <div>
-                    <h2><button id="0" onclick="btnScroll(this.id)">Home</button></h2>
-                </div>
-                <div>
-                    <h2><button id="1" onclick="btnScroll(this.id)">About</button></h2>
-                </div>
-                <div>
-                    <h2><button id="2" onclick="btnScroll(this.id)">Handbook</button></h2>
-                </div>
-                <div>
-                    <h2><button id="3" onclick="btnScroll(this.id)">Download</button></h2>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="card">
-        <div class="card-content column">
-            <div class="center column">
-                <h1 class="title">About Us</h1>
-                <h2 class="sub-title">We are safety enhancers</h2>
-            </div>
-            <div class="row phone-false">
-                <div class="square center column">
-                    <img class="pfp" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/profile/dania.gif" alt="">
-                    <H3>Dania Alfa</H3>
-                    <p>Hi, I am Dania Alfa</p>
-                    <p>I am 28 years of age and I have been working for 3 years as a front-end developer</p>
-                    <P>My skills are JavaScript, HTML and CSS</P>
-                </div>
-                <div class="square center column">
-                    <img class="pfp" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/profile/j.gif" alt="">
-                    <H3>Jaleel Bito</H3>
-                    <p>Hey, I am Jaleel Bito and I am 24 years of age</p>
-                    <p>I am the co-founder of this project and I assist in the development of both the front- and
-                        back-end</p>
-                    <p>My skills are JavaScript, HTML, CSS and C#</p>
-                </div>
-                <div class="square center column">
-                    <img class="pfp" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/profile/tijl.gif" alt="">
-                    <h3>Tijl Pleuger</h3>
-                    <p>Hello, my name is Tijl Pleuger and I am 22 years of age</p>
-                    <p>Within this project I assist in the development of both the front- and back-end, for example
-                        design and development </p>
-                    <p>My skills are HTML, CSS, JavaScript, Firebase and other Google services</p>
-                </div>
-                <div class="square center column">
-                    <img class="pfp" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/profile/tayfun.gif" alt="">
-                    <h3>Tayfun Something</h3>
-                    <p>Hey I'm Tayfun and I am 22 I think idk</p>
-                    <p>I'm not sure, I did stuff</p>
-                    <p>My skills are Security stuff</p>
-                </div>
-            </div>
-            <div class="mr-30 ml-30 center column w-m">
-                <h3 class="">Platform Veilig Ondernemen (PVO) Limburg</h3>
-                <p>PVO helps entrepreneurs in the province of Limburg to make themselves more resilient to various forms
-                    of crime</p>
-                <p>We achieve this with safety enhancers on various themes</p>
-                <p>This includes cybercrime, robberies, threats, fraudulent rental or rental, theft, money laundering,
-                    etc</p>
-                <p>PVO Limburg collaborates with police, municipalities, trade organizations and entrepreneurs at
-                    regional and provincial level</p>
-                <p>This is how we identify developments in the region and tailor our approach</p>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-content column">
-            <div class="w row center">
-                <button class="download-text btn-size mb-20-phone" onclick="openHandbook()"><div class="download-button"><h1><i class="bi bi-box-arrow-in-right"></i>Open Handbook</h1></div></button>
-                <button class="download-text btn-size mb-20-phone phone-false" onclick="FuncScroll(x = 3)"><div class="download-button"><h1><i class="bi bi-download"></i>Download Handbook</h1></div></button>
-                <button class="download-text btn-size mb-20-phone phone-true"><div class="download-button"><h1><i class="bi bi-box-arrow-in-right"></i>Open app-store</h1></div></button>
-            </div>
-            <div class="w space-around row">
-                <img class="mascot phone-false" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/svg/mascot.svg" alt="">
-                <div class="center mr-10 ml-10">
-                    <div>
-                        <h2 class="mb-10" style="text-decoration: underline;">Why do I use the Handbook?</h2>
-                        <p>Learning with the Leet Handbook website is loads of fun!</p>
-                        <p>I can learn while earning experience and levels, I can use these to show off my skills that I learned</p>
-                        <br>
-                        <p>With the app I can learn all about the latest cyber security threats while traveling on the train</p>
-                        <p>I can also learn while on my phone by using the mobile app</p><br><br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-content column">
-            <div class="mr-10 ml-10">
-                <h1 class="mb-20 title">The Handbook For Your Desktop!</h1>
-                <h2>Keep track of your progress and learn while you are offline</h2>
-                <h2>Our app updates when you connect to the internet to keep you up to date on the latest security threats</h2>
-                <h2>Aren't sure if you want to download the app? Try out our new web sersion!</h2>
-                <div class="center">
-                    <button class="mt-75"><div class="download-button"><h1>Download Now</h1><h4 style="text-decoration: underline;">Windows only</h4></div></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="card">
-        <div class="card-content">
-            <div class="ml-30 column">
-                <div class="column mb-30">
-                        <div class="center">
-                            <h1 class="mb-20 title">Platform Veilig Ondernemen</h1>
+                        <div class="center ml-30 mr-30">
+                            <div id="displayLevel"></div>
                         </div>
-                        <div class="center column">
-                            <p class="ml-10 tooltip"><a href="https://twitter.com/home" target="_blank"><i class="bi bi-twitter"></i>Twitter</a>
-                                <span class="tooltiptext phone-false">Click To Open Twitter</span>
-                            </p>
-                            <p class="ml-10 tooltip"><a href="https://www.linkedin.com/" target="_blank"></a><i class="bi bi-linkedin"></i>Linked-IN
-                                <span class="tooltiptext phone-false">Click To Open LinkedIN</span>
-                            </p>
-                        </div>
-                </div>
-                <div class="column mb-30">
-                        <div class="center">
-                            <h1 class="mb-10 title">About The Handbook</h1>
-                        </div>
-                        <div class="center column">
-                            <p class="ml-10">This handbook is designed to help you learn about security</p>
-                            <p class="ml-10">With our experience based system you will earn exp for completing levels</p>
-                            <p class="ml-10">Defend your privacy in a fun way!</p>
-                        </div>
-                </div>
-                <div class="column mb-30">
-                    <div class="center">
-                        <h1 class="mb-10 title">Contact us</h1>
-                    </div>
-                    <div class="center column">
-                        <p class="ml-10 tooltip"><a href="https://www.google.com/maps/place/Breukerweg+200,+6412+ZL+Heerlen/@50.9049177,5.9436252,17z/data=!3m1!4b1!4m6!3m5!1s0x47c0be80382293b7:0xc04ecfe224df6dec!8m2!3d50.9049177!4d5.9436252!16s%2Fg%2F11bw3zzzss?entry=ttu" target="_blank"><i class="bi bi-geo-alt-fill"></i>Heerlen, Breukerweg 200</a>
-                            <span class="tooltiptext phone-false">Click To Open Google Maps</span>
-                        </p>
-                        <p class="ml-10 tooltip"><button onclick="copyPhone()"><i class="bi bi-telephone-fill"></i>045 523 2576</button>
-                            <span class="tooltiptext phone-false">Click To Copy</span>
-                        </p>
-                        <p class="ml-10 tooltip"><i class="bi bi-envelope-fill"></i>pvo.help@gmail.com
-                            <span class="tooltiptext phone-false">Click To Open Mail</span>
-                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </footer>
-    <div class="login center column">
-        <div id="form-login" class="center column visible" style="position: absolute;">
-            <div class="center column">
-                <form id="loginForm">
-                    <div class="center column mb-20">
-                        <input type="email" id="emailLogin" placeholder="Email">
-                        <input type="password" id="passwordLogin" placeholder="New Password">    
-                        <button class="mt-20" type="submit">Login</button>
+            </header>
+            <div class="card-content row">
+                <div class="selector">
+                    <div class="column selector-bar center">
+                        <div class="bar">
+                            <div class="mt-20 mb-20">
+                                <button>
+                                    <h1>Internet</h1>
+                                    <img class="icon" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/webp/web.png" alt="">
+                                </button>
+                            </div>
+                            <div class="mt-20 mb-20">
+                                <button>
+                                    <h1>Firewall</h1>
+                                    <img class="icon" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/webp/firewall.png" alt="">
+                                </button>
+                            </div>
+                            <div class="mt-20 mb-20">
+                                <button>
+                                    <h1>Local</h1>
+                                    <img class="icon" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/webp/local.png" alt="">
+                                </button>
+                            </div>
+                            <div class="mt-20 mb-20">
+                                <button>
+                                    <h1>Stuff</h1>
+                                    <img class="icon" src="https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/private/leet/webp/stuff.png" alt="">
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </form>
-                <div class="mt-20 color">OR</div>
-                <button class="mt-40 color" onclick="divRegister()">Create an account instead</button>
-            </div>
-            <div class="mt-75 center">
-                <button class="color" onclick="btnClicked()">Forgot Password?</button>
+                </div>
+                <div class="content">test</div>
             </div>
         </div>
-        <div id="form-register" class="center column not-visible" style="position: absolute;">
-            <div class="center column">
-                <form id="registerForm">
-                    <div class="center column mb-20">
-                        <input type="text" id="usernameRegister" placeholder="Username">
-                        <input type="email" id="emailRegister" placeholder="Email">
-                        <input type="password" id="passwordRegister" placeholder="New Password">    
-                        <button class="mt-20" type="submit">Register</button>
-                    </div>
-                </form>
-                <div class="mt-20 color">OR</div>
-                <button class="mt-40 color" onclick="divLogin()">Login instead</button>
-            </div>
-        </div>
-         <h2 class="login-button">
-            <button onclick="userLoginClose()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" style="position:relative; top:-10">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                </svg>
-            </button>
-        </h2>
     </div>
 </body>
-<script type="module" src="https://github.com/Tijl-Pleuger-Vista/Challenge-6/raw/main/leet/assets/js/app-user.js"></script>
+<script type="module" src="../assets/js/user.js"></script>
 </html>
