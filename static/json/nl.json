@@ -10,28 +10,28 @@
     "href": "https://www.digitaltrustcenter.nl/de-5-basisprincipes-van-veilig-digitaal-ondernemen"
   },
   "sprites":{
-    "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/background.png",
+    "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/background.png",
     "hero": 
       {
-        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/idle.png",
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai/idle.png",
         "idleMaxFrames": "8",
-        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/attack.png",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai/attack.png",
         "attackMaxFrames": "6",
-        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/damage.png",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai/damage.png",
         "damageMaxFrames": "4",
-        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai/death.png",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai/death.png",
         "deathMaxFrames": "6"
       },
     
     "villain": 
       {
-        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/idle.png",
+        "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai-enemy/idle.png",
         "idleMaxFrames": "4",
-        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/attack.png",
+        "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai-enemy/attack.png",
         "attackMaxFrames": "4",
-        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/damage.png",
+        "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai-enemy/damage.png",
         "damageMaxFrames": "3",
-        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/website.github.io/main/public/leet-game/assets/img/samurai-enemy/death.png",
+        "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai-enemy/death.png",
         "deathMaxFrames": "7"
       }
   },

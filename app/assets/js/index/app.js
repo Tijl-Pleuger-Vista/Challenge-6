@@ -62,7 +62,7 @@ function userLogoutOpen(){
     localStorage.removeItem("user-email");
     localStorage.removeItem("user-password");
     localStorage.removeItem("user-creds");
-    location.reload();
+    // location.reload();
 }
 
 function openHandbook(){
