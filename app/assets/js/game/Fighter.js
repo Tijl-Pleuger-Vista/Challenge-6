@@ -2,6 +2,8 @@ import Sprite from './Sprite.js'
 
 let checkJson = JSON.parse(localStorage.getItem("json"));
 
+var jsonLength = 100 / checkJson.questions.length
+
 const canvas = document.querySelector('canvas');
 
 canvas.width = 350;
@@ -46,7 +48,7 @@ class Fighter extends Sprite {
             setTimeout(() => { this.attackCooldown = true }, 1000)
             this.switchSprite('attack')
             if (this.isHitting(antagonistFighter)) {
-                antagonistFighter.health -= 10;
+                antagonistFighter.health -= jsonLength;
                 gsap.to('#' + antagonistFighter.name + 'Health', { width: antagonistFighter.health + '%' });
                 antagonistFighter.switchSprite('takehit');
                 antagonistFighter.isTakingHit = true;

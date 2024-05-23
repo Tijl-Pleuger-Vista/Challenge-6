@@ -379,3 +379,14 @@ circle {
     text-decoration: underline;
     /* text-decoration-color: green; */
 }
+
+.bar{
+    margin-top: 8px;
+    width: 200px;
+    height: 10px;
+    border: 1px black solid;
+}
+.perc{
+    height: 10px;
+    background-color: aquamarine;
+}
