@@ -1,0 +1,239 @@
+{
+  "lang": "EN",
+  "init":{
+    "title": "PVO - Game",
+    "name": "cybersecurity",
+    "description": "Are you safe against cyber attacks?",
+    "player": "User",
+    "antagonist": "H4cker",
+    "start": "Click here to start",
+    "author": "Vista-College Students",
+    "href": "https://www.brightlands.com/smart-services-campus/cyberveiligheidsprogramma-limburg",
+    "skip": "true",
+    "css": ""
+    },
+    "sprites":{
+      "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/background.png",
+      "player": 
+        {
+          "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/protagonist/idle.png",
+          "idleMaxFrames": "8",
+          "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/protagonist/attack.png",
+          "attackMaxFrames": "6",
+          "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/protagonist/damage.png",
+          "damageMaxFrames": "4",
+          "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/protagonist/death.png",
+          "deathMaxFrames": "6"
+        },
+      
+      "antagonist": 
+        {
+          "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/antagonist/idle.png",
+          "idleMaxFrames": "4",
+          "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/antagonist/attack.png",
+          "attackMaxFrames": "4",
+          "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/antagonist/damage.png",
+          "damageMaxFrames": "3",
+          "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/antagonist/death.png",
+          "deathMaxFrames": "7"
+        }
+    },
+    "colors":{
+      "player": 
+        {
+          "min": "#6C192B",
+          "max": "#AF2424"
+        },
+      "antagonist": 
+        {
+          "min": "#004ff9",
+          "max": "#333892"
+        }
+    },
+    "questions": [
+        {
+            "question": "If a guest network is password protected, it is safe to use",
+            "answer": "1",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+            
+          },
+          {
+            "question": "The Internet connects computers, laptops and phones (etc.) all over the world",
+            "answer": "0",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "Accidental loss of a USB stick containing customer data is not a data breach",
+            "answer": "1",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "You can always safely install an app on an iPhone",
+            "answer": "1",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "If the website has a lock (https://), then the website is reliable",
+            "answer": "1",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "Many games on social media only serve to collect your data",
+            "answer": "0",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "A Gray Hat hacker always has permission to investigate a website for leaks",
+            "answer": "1",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "Shoulder surfing literally means looking over someone's shoulder to find out passwords or PIN codes",
+            "answer": "0",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "If you use 2FA, you can safely use the same password everywhere",
+            "answer": "1",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "Storing your passwords in a password vault (password manager) is one of the safest ways to keep passwords safe",
+            "answer": "0",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "Passphrases are harder to crack than passwords",
+            "answer": "0",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "If you have all the software in the cloud, you are safe",
+            "answer": "1",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "Most Hackers work from a computer with a Linux OS",
+            "answer": "0",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          },
+          {
+            "question": "It is safer to place network equipment (modem or router) in a locked cupboard",
+            "answer": "0",
+            "button": [
+              {
+                "text": "Correct"
+              },
+              {
+                "text": "Incorrect"
+              }
+            ]
+              
+          }
+    ]
+  }
+  
+  

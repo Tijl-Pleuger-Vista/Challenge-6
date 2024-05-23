@@ -1,0 +1,239 @@
+{
+    "lang": "NL",
+    "init":{
+      "title": "PVO - Game",
+      "name": "cybersecurity",
+      "description": "Bent u veilig tegen cyberaanvallen?",
+      "player": "User",
+      "antagonist": "H4cker",
+      "start": "Klik hier om te starten",
+      "author": "Vista-College Studenten",
+      "href": "https://www.brightlands.com/smart-services-campus/cyberveiligheidsprogramma-limburg",
+      "skip": "true",
+      "css": ""
+    },
+    "sprites":{
+      "background": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/background.png",
+      "player": 
+        {
+          "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai/idle.png",
+          "idleMaxFrames": "8",
+          "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai/attack.png",
+          "attackMaxFrames": "6",
+          "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai/damage.png",
+          "damageMaxFrames": "4",
+          "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai/death.png",
+          "deathMaxFrames": "6"
+        },
+      
+      "antagonist": 
+        {
+          "idle": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai-antagonist/idle.png",
+          "idleMaxFrames": "4",
+          "attack": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai-antagonist/attack.png",
+          "attackMaxFrames": "4",
+          "damage": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai-antagonist/damage.png",
+          "damageMaxFrames": "3",
+          "death": "https://raw.githubusercontent.com/Tijl-Pleuger-Vista/Challenge-6/main/static/img/samurai-antagonist/death.png",
+          "deathMaxFrames": "7"
+        }
+    },
+    "colors":{
+      "player": 
+        {
+          "min": "#6C192B",
+          "max": "#AF2424"
+        },
+      "antagonist": 
+        {
+          "min": "#004ff9",
+          "max": "#333892"
+        }
+    },
+    "questions": [
+        {
+            "question": "Als een gastennetwerk beveiligd is met een wachtwoord, is het veilig om te gebruiken",
+            "answer": "1",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+            
+          },
+          {
+            "question": "Het internet verbindt computers, laptops en telefoons (etc.) over de hele wereld met elkaar",
+            "answer": "0",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Het onopzettelijk kwijtraken van een USB stick met klantgegevens is geen datalek",
+            "answer": "1",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Op een iphone kun je altijd veilig een app installeren",
+            "answer": "1",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Als de website een slotje heeft (https://), dan is de website betrouwbaar",
+            "answer": "1",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Veel spelletjes op social media dienen alleen om je gegevens te verzamelen",
+            "answer": "0",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Een Grey Hat hacker heeft altijd toestemming om een website op lekken te onderzoeken",
+            "answer": "1",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Schoudersurfen is letterlijk bij iemand over de schouder meekijken om wachtwoorden of pincode te achterhalen",
+            "answer": "0",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Als je 2FA hanteert, kun je gerust overal hetzelfde wachtwoord gebruiken",
+            "answer": "1",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Je wachtwoorden opslaan in een wachtwoordenkluis (passwordmanager) is een van de veiligste manieren om wachtwoorden te beware",
+            "answer": "0",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Wachtwoordzinnen zijn moeilijker te kraken dan wachtwoorden",
+            "answer": "0",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Als je alle software in de cloud hebt, ben je veilig",
+            "answer": "1",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "De meeste Hackers werken vanuit een computer met een Linux OS",
+            "answer": "0",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          },
+          {
+            "question": "Het is veiliger om netwerkapparatuur (modem of router) in een afgesloten kast te plaatsen",
+            "answer": "0",
+            "button": [
+              {
+                "text": "juist"
+              },
+              {
+                "text": "onjuist"
+              }
+            ]
+              
+          }
+    ]
+  }
+  
+  

@@ -1,0 +1,13 @@
+{
+    "backgroundColor":"#CC000",
+    "solid":"true",
+    "displayName":
+        {
+            "name":"Pokémon",
+            "font":"",
+            "color":"white"
+        },
+    "icon":"https://assets.pokemon.com/static2/_ui/img/favicon.ico",
+    "provider":"HeadBodyScript",
+    "href":""
+}
