@@ -44,6 +44,6 @@ export const background = new Sprite({
         y: 0
     },
     imageSrc: checkJson.sprites.background,
-    scale: 0.585,
+    scale: 1.58,
 })
 export default Sprite;
